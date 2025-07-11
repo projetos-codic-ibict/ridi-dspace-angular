@@ -59,7 +59,7 @@
                 "inject": false,
                 "bundleName": "dspace-theme"
               },
-                            {
+              {
                 "input": "src/themes/ridi/styles/theme.scss",
                 "inject": false,
                 "bundleName": "custom-theme"
