@@ -1,4 +1,57 @@
 // Add any global css for the theme here
+:root{
+  --interactive: #1351b4;
+  --interactive-hover: #0c326f;
+  --header-color: #333;
+  --text-color: #555;
+  --border-color: #888;
+  --surface-rounder-sm: 4px;
+
+  --interactive-rgb :19, 81, 180;
+  --hover: .16;
+
+  // override
+  --bs-link-color-rgb: var(--interactive);
+  --ds-header-icon-color: var(--interactive);
+}
+
+body{
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: var(--header-color)
+}
+
+a{
+  color: var(--interactive);
+}
+
+.lead, .item-list-title{
+  font-weight: 400;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--interactive);
+  --bs-btn-border-color: var(--interactive);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--interactive);
+  --bs-btn-hover-border-color: var(--interactive);
+  --bs-btn-focus-shadow-rgb: 75, 105, 135;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--interactive);
+  --bs-btn-active-border-color: var(--interactive);
+  --bs-btn-active-shadow: inset 0 3px 5px var(--interactive);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--interactive);
+  --bs-btn-disabled-border-color: var(--interactive);
+}
+
+.btn-primary:hover{
+  background-image: linear-gradient(rgba(var(--interactive-rgb), var(--hover)), rgba(var(--interactive-rgb), var(--hover)));
+}
 
 // imports the base global style
 @import '../../../styles/_global-styles.scss';
+

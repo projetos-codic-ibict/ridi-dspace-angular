@@ -46,9 +46,10 @@
           padding: var(--ds-navbar-item-vertical-padding) var(--ds-navbar-item-horizontal-padding);
         }
         .ds-menu-item, .ds-menu-toggler-wrapper {
-          color: var(--ds-navbar-link-color) !important;
+          color: var(--interactive) !important;
           &:hover, &:focus {
-            color: var(--ds-navbar-link-color-hover) !important;
+            color: var(--interactive-hover) !important;
+           background-image: linear-gradient(rgba(var(--interactive-rgb),var(--hover)),rgba(var(--interactive-rgb),var(--hover)));
           }
         }
 
