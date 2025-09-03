@@ -6,4 +6,33 @@
     <ng-container
     *ngComponentOutlet="(sectionMap$ | async).get(section.id)?.component; injector: (sectionMap$ | async).get(section.id)?.injector;"></ng-container>
   }
+ 
+
+<div class="nav-item dropdown"
+     (mouseenter)="openDropdownORidi()"
+     (mouseleave)="closeDropdownORidi()">
+  <a class="ds-menu-item nav-link dropdown-toggle"
+     href="#"
+     id="o-ridi-dropdown"
+     role="button"
+     aria-haspopup="true"
+     [attr.aria-expanded]="isDropdownORidiOpen"
+     (click)="$event.preventDefault(); isDropdownORidiOpen = !isDropdownORidiOpen">
+    O RiDi
+  </a>
+  <div class="dropdown-menu"
+       [ngClass]="{'show': isDropdownORidiOpen}"
+       aria-labelledby="o-ridi-dropdown">
+    <a class="ds-menu-item dropdown-item" href="/sobre">Sobre</a>
+    <a class="ds-menu-item dropdown-item" href="/contato">Contato</a>
+    <a class="ds-menu-item dropdown-item" href="/ajuda">Ajuda</a>
+    <a class="ds-menu-item dropdown-item" href="/termos-de-uso">Termos de Uso</a>
+    <a class="ds-menu-item dropdown-item" href="/politica-de-privacidade">Política de Privacidade</a>
+  </div>
+</div>
+
+ <a class="ds-menu-item nav-link" href="/minha-pagina" role="menuitem">
+  Contatos
+</a>
+
 </div>

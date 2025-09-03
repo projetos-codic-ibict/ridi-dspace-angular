@@ -30,4 +30,13 @@ import { ThemedUserMenuComponent } from '../../../../app/shared/auth-nav-menu/us
   ],
 })
 export class NavbarComponent extends BaseComponent {
+  isDropdownORidiOpen = false;
+
+  openDropdownORidi() {
+    this.isDropdownORidiOpen = true;
+  }
+
+  closeDropdownORidi() {
+    this.isDropdownORidiOpen = false;
+  }
 }
