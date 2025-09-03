@@ -1,0 +1,10 @@
+<div class="community-stats row">
+  <div *ngFor="let stat of stats$ | async" class="col-6 col-md-3 mb-3">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">{{ stat.name }}</h5>
+        <p class="card-text"><strong>{{ stat.count }}</strong> itens</p>
+      </div>
+    </div>
+  </div>
+</div>

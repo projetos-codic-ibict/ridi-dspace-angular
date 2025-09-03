@@ -1,0 +1,129 @@
+<ds-home-coar></ds-home-coar>
+<ds-home-news></ds-home-news>
+@if (showDiscoverFilters) {
+  <ds-configuration-search-page
+    [sideBarWidth]="3"
+    [showViewModes]="false"
+    [searchEnabled]="false"
+    [inPlaceSearch]="false"
+    [showScopeSelector]="false">
+    <ng-container searchContentTop *ngTemplateOutlet="homeContent"></ng-container>
+  </ds-configuration-search-page>
+}
+@if (!showDiscoverFilters) {
+  <div class="container">
+    <ng-container *ngTemplateOutlet="homeContent"></ng-container>
+  </div>
+}
+<ds-suggestions-popup></ds-suggestions-popup>
+
+<ng-template #homeContent>
+    <!-- <div *ngIf="randomItem" class="highlight-card">
+  <h3>
+    <a [routerLink]="['/entities', randomItem.id]">
+      {{ randomItem.metadata['dc.title']?.[0]?.value || 'Sem título' }}
+    </a>
+  </h3>
+  <p>{{ randomItem.metadata['dc.description.abstract']?.[0]?.value || '' }}</p>
+</div> -->
+
+
+
+<ds-search-form [inPlaceSearch]="false"
+    [searchPlaceholder]="'home.search-form.placeholder' | translate">
+  </ds-search-form>
+
+<div class="highlight-container w-100 py-5 px-3">
+  <h2 class="text-center mb-5 text-primary fw-bold">
+    Destaques randômico
+  </h2>
+
+  <div class="row justify-content-center g-4">
+    
+    <div class="col-12 col-md-6" *ngIf="randomItem1">
+      <div class="card highlight-card shadow-sm h-100">
+        <div class="card-body d-flex flex-column">
+          
+          <h5 class="fw-bold text-primary mb-3">
+            <a [routerLink]="['/items', randomItem1.id]" 
+               class="text-primary text-decoration-none" 
+               target="_blank">
+              {{ randomItem1.metadata['dc.title']?.[0]?.value || 'Sem título' }}
+            </a>
+          </h5>
+
+          
+          <p class="flex-grow-1 text-muted text-justify">
+            {{ getResumo(randomItem1, 250) }}
+          </p>
+
+          
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-primary fw-bold">
+              {{ randomItem1.metadata['dc.type']?.[0]?.value || 'Outro' }}
+            </small>
+            <button class="btn btn-link p-0">
+              <i class="bi bi-share text-primary fs-5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-12 col-md-6" *ngIf="randomItem2">
+      <div class="card highlight-card shadow-sm h-100">
+        <div class="card-body d-flex flex-column">
+          
+          <h5 class="fw-bold text-primary mb-3">
+            <a [routerLink]="['/items', randomItem2.id]" 
+               class="text-primary text-decoration-none" 
+               target="_blank">
+              {{ randomItem2.metadata['dc.title']?.[0]?.value || 'Sem título' }}
+            </a>
+          </h5>
+
+         
+          <p class="flex-grow-1 text-muted text-justify">
+            {{ getResumo(randomItem2, 250) }}
+          </p>
+
+          
+          <div class="d-flex justify-content-between align-items-center">
+            <small class="text-primary fw-bold">
+              {{ randomItem2.metadata['dc.type']?.[0]?.value || 'Outro' }}
+            </small>
+            <button class="btn btn-link p-0">
+              <i class="bi bi-share text-primary fs-5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="types.length > 0" class="doc-types-container">
+  <div class="doc-types-grid">
+    <div *ngFor="let type of types" (click)="onClickDcType(type.name)" class="doc-card">
+      <div class="icon">
+        <img [src]="getIcon(type.name)" alt="ícone" />
+      </div>
+      <div class="text">
+        <p class="type-name">{{ type.name }}</p>
+        <p class="count">{{ type.count }} publicações</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+  <!-- <ds-top-level-community-list></ds-top-level-community-list> -->
+  @if (recentSubmissionspageSize>0) {
+    <ds-recent-item-list></ds-recent-item-list>
+  }
+</ng-template>

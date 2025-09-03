@@ -1,0 +1,120 @@
+@include media-breakpoint-down(md) {
+  ds-themed-configuration-search-page + .container {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.highlight-container {
+  background-color: #f2f2f2; 
+  width: 100%;
+  border-radius: 0; 
+}
+
+.highlight-card {
+  border: 1px solid #cfd8dc; 
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  a {
+    font-weight: 600;
+  }
+}
+
+.doc-types-container {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 1000px;
+
+  .title {
+    margin-bottom: 1.5rem;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3237;
+    text-align: center;
+  }
+
+  .doc-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .doc-card {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: #f5f6f7;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 12px;
+
+      img {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+
+      .type-name {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+        color: #2c3237;
+      }
+
+      .count {
+        font-size: 14px;
+        color: #00897b;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    .cards {
+      gap: 12px;
+
+      .card-custom {
+        width: 45%;
+        height: auto;
+        padding: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    .cards {
+      .card-custom {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+:host {
+    display: block;
+}
+
+.display-3 {
+    word-break: break-word;
+}
+
+
+
+a {
+  color: var(--ds-home-news-link-color);
+
+  &:hover {
+    color: var(--ds-home-news-link-hover-color);
+  }
+}
