@@ -6756,10 +6756,10 @@
   "repository.image.logo": "Logo do Repositório",
 
   // "repository.title": "DSpace Repository",
-  "repository.title": "Repositório DSpace",
+  "repository.title": "Repositório Institucional do Ibict",
 
   // "repository.title.prefix": "DSpace Repository :: ",
-  "repository.title.prefix": "Repositório DSpace :: ",
+  "repository.title.prefix": "Repositório Institucional do Ibict :: ",
 
   // "resource-policies.add.button": "Add",
   "resource-policies.add.button": "Adicionar",
