@@ -15,3 +15,38 @@ a {
     color: var(--ds-home-news-link-hover-color);
   }
 }
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px; // aumentei bastante a altura
+  padding: 140px 20px 160px; // top e bottom bem maiores
+}
+
+.bg-hero {
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 1400px; // pode ser maior para ocupar melhor em telas largas
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  top: 4rem;
+}
+
+.hero-content h2 {
+  font-size: 2.2rem;
+  line-height: 1.4;
+  color: #28408B;
+}
+
+
+

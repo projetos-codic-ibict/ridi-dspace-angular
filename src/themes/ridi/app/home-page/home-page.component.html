@@ -34,7 +34,7 @@
   </ds-search-form>
 
 <div class="highlight-container w-100 py-5 px-3">
-  <h2 class="text-center mb-5 text-primary fw-bold">
+  <h2 class="randomic text-center mb-5 fw-bold">
     Destaques randômico
   </h2>
 
@@ -44,9 +44,9 @@
       <div class="card highlight-card shadow-sm h-100">
         <div class="card-body d-flex flex-column">
           
-          <h5 class="fw-bold text-primary mb-3">
+          <h5 class="randomic fw-bold  mb-3">
             <a [routerLink]="['/items', randomItem1.id]" 
-               class="text-primary text-decoration-none" 
+               class="randomic text-decoration-none" 
                target="_blank">
               {{ randomItem1.metadata['dc.title']?.[0]?.value || 'Sem título' }}
             </a>
@@ -59,11 +59,11 @@
 
           
           <div class="d-flex justify-content-between align-items-center">
-            <small class="text-primary fw-bold">
+            <small class="randomic fw-bold">
               {{ randomItem1.metadata['dc.type']?.[0]?.value || 'Outro' }}
             </small>
             <button class="btn btn-link p-0">
-              <i class="bi bi-share text-primary fs-5"></i>
+              <i class="randomic bi bi-share  fs-5"></i>
             </button>
           </div>
         </div>
@@ -75,9 +75,9 @@
       <div class="card highlight-card shadow-sm h-100">
         <div class="card-body d-flex flex-column">
           
-          <h5 class="fw-bold text-primary mb-3">
+          <h5 class="randomic fw-bold  mb-3">
             <a [routerLink]="['/items', randomItem2.id]" 
-               class="text-primary text-decoration-none" 
+               class="randomic text-decoration-none" 
                target="_blank">
               {{ randomItem2.metadata['dc.title']?.[0]?.value || 'Sem título' }}
             </a>
@@ -90,11 +90,11 @@
 
           
           <div class="d-flex justify-content-between align-items-center">
-            <small class="text-primary fw-bold">
+            <small class="randomic fw-bold">
               {{ randomItem2.metadata['dc.type']?.[0]?.value || 'Outro' }}
             </small>
             <button class="btn btn-link p-0">
-              <i class="bi bi-share text-primary fs-5"></i>
+              <i class="randomic bi bi-share  fs-5"></i>
             </button>
           </div>
         </div>
@@ -111,7 +111,7 @@
         <img [src]="getIcon(type.name)" alt="ícone" />
       </div>
       <div class="text">
-        <p class="type-name">{{ type.name }}</p>
+        <p class="randomic type-name">{{ type.name }}</p>
         <p class="count">{{ type.count }} publicações</p>
       </div>
     </div>
