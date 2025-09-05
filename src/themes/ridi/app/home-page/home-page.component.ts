@@ -75,11 +75,11 @@ export class HomePageComponent implements OnInit {
     this.carregarTiposDocumentos(); // carregamento independente
   }
 
-  onClickDcType(type: string): void {
-    const queryParams = { 'query=dc.type:': type };
-    // Navega para a página de busca com o filtro aplicado
-    window.open(`/search?${new URLSearchParams(queryParams).toString()}`, '_blank');
-  }
+onClickDcType(type: string): void {
+  const queryParams = { query: `dc.type:${type}` };
+  window.open(`/search?${new URLSearchParams(queryParams).toString()}`, '_blank');
+}
+
 
   getIcon(type: string): string {
     return this.iconesMap[type] || 'assets/ridi/images/bookmark.svg';
@@ -90,9 +90,10 @@ export class HomePageComponent implements OnInit {
    *  ================================ */
   private carregarDestaqueAleatorio(): void {
     this.isLoading = true;
-    this.http.get<any>(
-  `${environment.rest.baseUrl}/api/discover/search/objects?size=100`
-)
+    this.http
+      .get<any>(
+        `${environment.rest.baseUrl}/api/discover/search/objects?size=100`
+      )
       .subscribe({
         next: (data) => {
           const items = this.extrairItens(data);
@@ -134,49 +135,57 @@ export class HomePageComponent implements OnInit {
   /** ================================
    *  TIPOS DE DOCUMENTOS
    *  ================================ */
-  private carregarTiposDocumentos(): void {
-    this.http
-      .get<any>(
-        `${environment.rest.baseUrl}/api/discover/search/objects?size=1000`
-      )
-      .subscribe({
-        next: (data) => {
-          const items = this.extrairItens(data);
-          const typeCountMap = this.contarTipos(items);
+  private async carregarTiposDocumentos(): Promise<void> {
+    try {
+      // Defina os tipos que você quer exibir
+      const tiposItens = [
+        'Apresentação',
+        'Artigo',
+        'Artigo de Periódico',
+        'Capítulo de livro',
+        'Dissertação',
+        'Livro',
+        'Outro',
+        'Tese',
+        'Trabalho apresentado em evento',
+      ];
 
-          this.types = Object.keys(typeCountMap)
-            .sort()
-            .map((key) => ({
-              name: key,
-              count: typeCountMap[key],
-            }));
+      // Dispara todas as requisições em paralelo
+      const promises = tiposItens.map((tipo) =>
+        fetch(
+          `${environment.rest.baseUrl}/api/discover/facets/has_content_in_original_bundle?query=dc.type:${encodeURIComponent(tipo)}`
+        ).then((res) => res.json())
+      );
 
-          this.cdr.detectChanges();
-        },
-        error: (err) => {
-          console.error('Erro ao buscar tipos de documentos:', err);
-        },
+      const results = await Promise.all(promises);
+
+      // Monta o objeto de quantidades
+      const quantidades: Record<string, number> = {};
+      results.forEach((result, index) => {
+        const nomeTipo = tiposItens[index];
+        const count = result._embedded?.values?.[0]?.count ?? 0;
+        quantidades[nomeTipo] = count;
       });
+
+      // Atualiza this.types no formato usado no template
+      this.types = Object.keys(quantidades).map((key) => ({
+        name: key,
+        count: quantidades[key],
+      }));
+
+      // Opcional: ordenar por nome
+      this.types.sort((a, b) => a.name.localeCompare(b.name));
+
+      this.cdr.detectChanges();
+    } catch (err) {
+      console.error('Erro ao buscar tipos de documentos:', err);
+    }
   }
 
-  /** ================================
-   *  AUXILIARES
-   *  ================================ */
   private extrairItens(data: any): any[] {
     return (data._embedded?.searchResult?._embedded?.objects || [])
       .map((o: any) => o._embedded.indexableObject)
       .filter((obj: any) => obj.type === 'item');
-  }
-
-  private contarTipos(items: any[]): Record<string, number> {
-    const typeCountMap: Record<string, number> = {};
-    items.forEach((item) => {
-      const type = item.metadata['dc.type']?.[0]?.value;
-      if (type && typeof type === 'string') {
-        typeCountMap[type] = (typeCountMap[type] || 0) + 1;
-      }
-    });
-    return typeCountMap;
   }
 
   /** Limita o resumo em X caracteres */
