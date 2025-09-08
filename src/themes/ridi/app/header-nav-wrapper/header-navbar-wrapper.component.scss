@@ -46,7 +46,7 @@
           padding: var(--ds-navbar-item-vertical-padding) var(--ds-navbar-item-horizontal-padding);
         }
         .ds-menu-item, .ds-menu-toggler-wrapper {
-          color: var(--interactive) !important;
+          color: #28408B !important;
           &:hover, &:focus {
             color: var(--interactive-hover) !important;
            background-image: linear-gradient(rgba(var(--interactive-rgb),var(--hover)),rgba(var(--interactive-rgb),var(--hover)));

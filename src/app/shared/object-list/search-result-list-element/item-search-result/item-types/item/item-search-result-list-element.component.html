@@ -2,7 +2,7 @@
   @if (showThumbnails) {
     <div class="col-3 col-md-2">
       @if (linkType !== linkTypes.None) {
-        <a [target]="(linkType === linkTypes.ExternalLink) ? '_blank' : '_self'" [attr.rel]="(linkType === linkTypes.ExternalLink) ? 'noopener noreferrer' : null"
+        <a  [target]="(linkType === linkTypes.ExternalLink) ? '_blank' : '_self'" [attr.rel]="(linkType === linkTypes.ExternalLink) ? 'noopener noreferrer' : null"
           [routerLink]="[itemPageRoute]" class="dont-break-out" tabindex="-1">
           <ds-thumbnail [thumbnail]="dso?.thumbnail | async" [limitWidth]="true">
           </ds-thumbnail>
@@ -26,7 +26,7 @@
     @if (object !== undefined && object !== null) {
       <ds-truncatable [id]="dso.id">
         @if (linkType !== linkTypes.None) {
-          <a [target]="(linkType === linkTypes.ExternalLink) ? '_blank' : '_self'" [attr.rel]="(linkType === linkTypes.ExternalLink) ? 'noopener noreferrer' : null"
+          <a class="item-color" [target]="(linkType === linkTypes.ExternalLink) ? '_blank' : '_self'" [attr.rel]="(linkType === linkTypes.ExternalLink) ? 'noopener noreferrer' : null"
             [routerLink]="[itemPageRoute]" class="lead item-list-title dont-break-out"
           [innerHTML]="dsoTitle" role="link" tabindex="0"></a>
         }
