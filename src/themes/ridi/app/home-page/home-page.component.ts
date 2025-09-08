@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { Site } from '../../../../app/core/shared/site.model';
 import { HomeCoarComponent } from '../../../../app/home-page/home-coar/home-coar.component';
 import { ThemedHomeNewsComponent } from '../../../../app/home-page/home-news/themed-home-news.component';
-import { RecentItemListComponent } from '../../../../app/home-page/recent-item-list/recent-item-list.component';
+import { RecentItemListComponent } from './recent-item-list/recent-item-list.component';
 import { ThemedTopLevelCommunityListComponent } from '../../../../app/home-page/top-level-community-list/themed-top-level-community-list.component';
 import { CommunityStatsComponent } from './community-stats/community-stats.component';
 import { SuggestionsPopupComponent } from '../../../../app/notifications/suggestions/popup/suggestions-popup.component';
