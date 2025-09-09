@@ -34,8 +34,8 @@ import { ItemComponent } from '../shared/item.component';
 @listableObjectComponent(Item, ViewMode.StandalonePage)
 @Component({
   selector: 'ds-untyped-item',
-  styleUrls: ['./untyped-item.component.scss'],
-  templateUrl: './untyped-item.component.html',
+  styleUrls: ['../../../../../themes/ridi/app/item-page/simple/item-types/untyped-item/untyped-item.component.scss'],
+  templateUrl: '../../../../../themes/ridi/app/item-page/simple/item-types/untyped-item/untyped-item.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [
