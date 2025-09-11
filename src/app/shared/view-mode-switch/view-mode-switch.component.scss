@@ -1,0 +1,19 @@
+.btn-ridi {
+  background-color: var(--cor-ridi);
+  color: white;
+
+  &:hover {
+    background-color: var(--interactive-hover);
+    color: white;
+  }
+
+  &:active {
+    background-color: var(--cor-ridi-btn-active);
+    color: white;
+  }
+
+  &.active {
+    background-color: var(--cor-ridi-btn-active);
+    color: white;
+  }
+}
