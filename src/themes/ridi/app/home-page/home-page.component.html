@@ -62,8 +62,8 @@
             <small class="randomic fw-bold">
               {{ randomItem1.metadata['dc.type']?.[0]?.value || 'Outro' }}
             </small>
-            <button class="btn btn-link p-0">
-              <i class="randomic bi bi-share  fs-5"></i>
+            <button class="btn btn-share p-0" (click)="copyItemLink(randomItem1.id)">
+              <i class="fa-solid fa-share-nodes fs-5"></i>
             </button>
           </div>
         </div>
@@ -93,8 +93,8 @@
             <small class="randomic fw-bold">
               {{ randomItem2.metadata['dc.type']?.[0]?.value || 'Outro' }}
             </small>
-            <button class="btn btn-link p-0">
-              <i class="randomic bi bi-share  fs-5"></i>
+            <button class="btn btn-share p-0" (click)="copyItemLink(randomItem2.id)">
+              <i class="fa-solid fa-share-nodes fs-5"></i>
             </button>
           </div>
         </div>
@@ -102,6 +102,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 <div *ngIf="types.length > 0" class="doc-types-container">

@@ -80,6 +80,18 @@ onClickDcType(type: string): void {
   window.open(`/search?${new URLSearchParams(queryParams).toString()}`, '_blank');
 }
 
+copyItemLink(itemId: string): void {
+  const itemLink = `${window.location.origin}/items/${itemId}`;
+  navigator.clipboard.writeText(itemLink).then(
+    () => {
+      console.log('Link copiado para a área de transferência:', itemLink);
+    },
+    (err) => {
+      console.error('Erro ao copiar o link: ', err);
+    }
+  );
+}
+
 
   getIcon(type: string): string {
     return this.iconesMap[type] || 'assets/ridi/images/bookmark.svg';

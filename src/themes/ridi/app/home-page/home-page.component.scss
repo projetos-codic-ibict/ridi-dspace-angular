@@ -100,6 +100,31 @@
   }
 }
 
+.btn-share {
+  color: #28408B;
+  background: transparent;
+  border: 1px solid #28408B;
+  border-radius: 50%;
+  width: 40px;         
+  height: 40px;        
+  display: flex;       
+  justify-content: center; 
+  align-items: center;    
+  padding: 0;
+  cursor: pointer;
+
+
+  &:hover {
+    color: #1a2e5b;
+    background-color: rgba(40, 64, 139, 0.1); 
+    transform: translateY(-2px); 
+  }
+
+  i {
+    font-size: 18px; 
+  }
+}
+
 @media (max-width: 768px) {
   .card-container {
     .cards {
