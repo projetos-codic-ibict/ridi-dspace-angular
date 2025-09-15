@@ -6,3 +6,9 @@
         padding-left: 20px;
     }
 }
+:host {
+  ::ng-deep .pagination {
+    --bs-pagination-active-bg: #28408B;
+    --bs-pagination-color: #28408B;
+  }
+}

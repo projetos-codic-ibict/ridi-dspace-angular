@@ -1,5 +1,5 @@
 .btn-ridi {
-  background-color: var(--cor-ridi);
+  background-color: #28408B;
   color: white;
 
   &:hover {
@@ -8,12 +8,12 @@
   }
 
   &:active {
-    background-color: var(--cor-ridi-btn-active);
+    background-color: #4D69C0;
     color: white;
   }
 
   &.active {
-    background-color: var(--cor-ridi-btn-active);
+    background-color: #4D69C0;
     color: white;
   }
 }

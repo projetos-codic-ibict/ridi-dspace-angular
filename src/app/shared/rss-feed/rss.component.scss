@@ -10,3 +10,12 @@
 .margin-right {
     margin-right: .5em;
 }
+
+a{
+    background-color: #28408B;
+
+    &:hover {
+    background-color: var(--interactive-hover);
+    color: white;
+  }
+}
