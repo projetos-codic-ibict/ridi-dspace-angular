@@ -16,30 +16,23 @@ a {
   }
 }
 
-.hero-section {
-  position: relative;
-  overflow: hidden;
-  min-height: 500px; // aumentei bastante a altura
-  padding: 140px 20px 160px; // top e bottom bem maiores
+.bg-hero {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px; // pode ser maior para ocupar melhor em telas largas
 }
 
-.bg-hero {
-  padding: 2rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  max-width: 1400px; // pode ser maior para ocupar melhor em telas largas
+.bg-hero img {
+  max-width: 100%;
+  max-height: 70vh;
   height: auto;
-  transform: translate(-50%, -50%);
   opacity: 0.4;
-  z-index: 1;
 }
 
 .hero-content {
-  position: relative;
+  position: absolute;
   z-index: 2;
-  top: 4rem;
+  top: 50%;
 }
 
 .hero-content h2 {
@@ -48,5 +41,8 @@ a {
   color: #28408B;
 }
 
-
-
+.hero-content h2 {
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
