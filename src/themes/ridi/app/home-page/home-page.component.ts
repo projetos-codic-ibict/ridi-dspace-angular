@@ -94,11 +94,11 @@ onClickDcType(type: string): void {
 openShareDialog(item: any) {
     const url = `${window.location.origin}/items/${item.id}`;
 
-    this.shareLinks.instagram = `https://www.instagram.com/sharer.php?u=${encodeURIComponent(url)}`;
-    this.shareLinks.linkedin = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
-    this.shareLinks.facebook = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-    this.shareLinks.twitter = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`;
-    this.shareLinks.whatsapp = `https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`;
+    // this.shareLinks.instagram = `https://www.instagram.com/sharer.php?u=${encodeURIComponent(url)}`;
+    // this.shareLinks.linkedin = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+    // this.shareLinks.facebook = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    // this.shareLinks.twitter = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`;
+    // this.shareLinks.whatsapp = `https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`;
 
     this.shareDialog.nativeElement.showModal();
   }
