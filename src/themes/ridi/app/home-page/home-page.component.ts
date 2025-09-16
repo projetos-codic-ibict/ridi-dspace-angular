@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, Inject, OnInit, ChangeDetectorRef, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
@@ -38,6 +38,8 @@ import { environment } from 'src/environments/environment';
   ],
 })
 export class HomePageComponent implements OnInit {
+  @ViewChild('shareDialog') shareDialog!: ElementRef<HTMLDialogElement>;
+
   site$: Observable<Site>;
   recentSubmissionspageSize: number;
   showDiscoverFilters: boolean;
@@ -45,6 +47,15 @@ export class HomePageComponent implements OnInit {
   randomItem1: any = null;
   randomItem2: any = null;
   isLoading: boolean = true;
+  shareItem: any = null;
+  shareLinks = {
+    instagram: '#',
+    linkedin: '#',
+    facebook: '#',
+    twitter: '#',
+    whatsapp: '#'
+  };
+
   types: { name: string; count: number }[] = [];
   iconesMap: Record<string, string> = {
     Apresentação: 'assets/ridi/images/book.svg',
@@ -79,6 +90,24 @@ onClickDcType(type: string): void {
   const queryParams = { query: `dc.type:${type}` };
   window.open(`/search?${new URLSearchParams(queryParams).toString()}`, '_blank');
 }
+
+openShareDialog(item: any) {
+    const url = `${window.location.origin}/items/${item.id}`;
+
+    this.shareLinks.instagram = `https://www.instagram.com/sharer.php?u=${encodeURIComponent(url)}`;
+    this.shareLinks.linkedin = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+    this.shareLinks.facebook = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    this.shareLinks.twitter = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`;
+    this.shareLinks.whatsapp = `https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`;
+
+    this.shareDialog.nativeElement.showModal();
+  }
+
+  closeShareDialog() {
+    this.shareDialog.nativeElement.close();
+  }
+
+
 
 copyItemLink(itemId: string): void {
   const itemLink = `${window.location.origin}/items/${itemId}`;

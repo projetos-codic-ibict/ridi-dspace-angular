@@ -125,6 +125,86 @@
   }
 }
 
+.share-modal {
+  padding: 50px 30px;               
+  border: none;
+  border-radius: 25px;              
+  max-width: 600px;
+  width: 90%;                        
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  background-color: #fff;           
+}
+
+.share-modal::backdrop {
+  background: rgba(0,0,0,0.6);       
+}
+
+.share-modal h3 {
+  font-size: 1.8rem;                 
+  margin-bottom: 30px;               
+  color: #28408B;
+}
+
+.share-modal .icons {
+  display: flex;
+  justify-content: space-around;      
+  font-size: 3rem;                    
+  margin-bottom: 30px;
+  gap: 25px;
+  flex-wrap: wrap;                    
+}
+
+.share-modal .icons a {
+  color: #28408B;
+  text-decoration: none;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.share-modal .icons a:hover {
+  transform: scale(1.3);
+  color: #1f306e;                    
+}
+
+.btn-load {
+  background-color: #28408B;
+  border-radius: 12px;
+  color: #fff;
+  padding: 14px 35px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-load:hover {
+  opacity: 0.95;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 480px) {
+  .share-modal {
+    padding: 30px 20px;
+  }
+
+  .share-modal h3 {
+    font-size: 1.5rem;
+  }
+
+  .share-modal .icons {
+    font-size: 2.5rem;
+    gap: 15px;
+  }
+
+  .btn-load {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+
 @media (max-width: 768px) {
   .card-container {
     .cards {
