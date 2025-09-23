@@ -11108,5 +11108,21 @@
   // TODO New key - Add a translation
   "file-download-link.request-copy": "Request a copy of ",
 
+//Navbar
+ "navbar.about" : "Sobre",
+ "navbar.help" : "Ajuda",
+ "navbar.terms" : "Termos de Uso",
+ "navbar.privacy" : "Política de Privacidade",
 
+ "navbar.contacts" : "Contatos",
+
+//Footer
+  "footer.help": "Ajuda",
+  "footer.sitemap": "Mapa do site",
+  "footer.indexing_policy": "Política de indexação",
+  "footer.text1": "Instituto Brasileiro de Informação em Ciência e Tecnologia (Ibict)",
+  "footer.text2": "SAUS Quadra 5 • Lote 6 Bloco H • Asa Sul • CEP: 70.070-912 • Brasília - DF",
+  "footer.text3": "Fale conosco: rd@ibict.br • +55 61 3217-6449 / 6460 / 6433",
+
+ 
 }
