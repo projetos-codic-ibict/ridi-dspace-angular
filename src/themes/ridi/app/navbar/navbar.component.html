@@ -23,16 +23,15 @@
   <div class="dropdown-menu"
        [ngClass]="{'show': isDropdownORidiOpen}"
        aria-labelledby="o-ridi-dropdown">
-    <a class="ds-menu-item dropdown-item" href="/sobre">Sobre</a>
-    <a class="ds-menu-item dropdown-item" href="/contato">Contato</a>
-    <a class="ds-menu-item dropdown-item" href="/ajuda">Ajuda</a>
-    <a class="ds-menu-item dropdown-item" href="/termos-de-uso">Termos de Uso</a>
-    <a class="ds-menu-item dropdown-item" href="/politica-de-privacidade">Política de Privacidade</a>
+    <a class="ds-menu-item dropdown-item" href="/sobre">{{'navbar.about' | translate}}</a>
+    <a class="ds-menu-item dropdown-item" href="/ajuda">{{'navbar.help' | translate}}</a>
+    <a class="ds-menu-item dropdown-item" href="/termos-de-uso">{{'navbar.terms' | translate}}</a>
+    <a class="ds-menu-item dropdown-item" href="/politica-de-privacidade">{{'navbar.privacy' | translate}}</a>
   </div>
 </div>
 
  <a class="ds-menu-item nav-link" href="/minha-pagina" role="menuitem">
-  Contatos
+  {{'navbar.contacts' | translate}}
 </a>
 
 </div>
