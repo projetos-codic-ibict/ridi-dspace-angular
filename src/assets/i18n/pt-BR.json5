@@ -5274,7 +5274,7 @@
   "menu.section.browse_community_by_title": "Por Título",
 
   // "menu.section.browse_global": "All of DSpace",
-  "menu.section.browse_global": "Tudo no DSpace",
+  "menu.section.browse_global": "Navegar",
 
   // "menu.section.browse_global_by_author": "By Author",
   "menu.section.browse_global_by_author": "Por Autor",
@@ -5299,7 +5299,15 @@
 
   // "menu.section.browse_global_geospatial_map": "By Geolocation (Map)",
   // TODO New key - Add a translation
-  "menu.section.browse_global_geospatial_map": "By Geolocation (Map)",
+  "menu.section.browse_global_geospatial_map": "Por Geolocalização (Mapa)",
+
+  "menu.section.browse_global_by_language": "Por Idioma de publicação",
+
+  "menu.section.browse_global_by_knowledgearea": "Por Área de conhecimento",
+
+  "menu.section.browse_global_by_keyword": "Por Palavra-chave",
+
+  "menu.section.browse_global_by_institution": "Por Insituição",
 
   // "menu.section.control_panel": "Control Panel",
   "menu.section.control_panel": "Painel de Controle",
@@ -7066,6 +7074,10 @@
 
   // "search.filters.filter.author.head": "Author",
   "search.filters.filter.author.head": "Autor",
+
+  "search.filters.filter.cnpq.head": "Área de conhecimento",
+
+  "search.filters.filter.name.head": "Insituição",
 
   // "search.filters.filter.author.placeholder": "Author name",
   "search.filters.filter.author.placeholder": "Nome do autor",
