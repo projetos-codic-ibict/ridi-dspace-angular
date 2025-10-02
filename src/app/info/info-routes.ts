@@ -17,12 +17,34 @@ import {
   END_USER_AGREEMENT_PATH,
   FEEDBACK_PATH,
   PRIVACY_PATH,
+  PRESENTATION_PATH,
+  REPOSITORY_POLICY_PATH,
+  CONTACTS_PATH,
 } from './info-routing-paths';
 import { NotifyInfoComponent } from './notify-info/notify-info.component';
 import { ThemedPrivacyComponent } from './privacy/themed-privacy.component';
-
-
+import { PresentationPageComponent } from '../../themes/ridi/app/presentation-page/presentation-page.component';
+import { RepositoryPolicyComponent } from '../../themes/ridi/app/repository-policy/repository-policy.component';
+import { ContactsComponent } from '../../themes/ridi/app/contacts/contacts.component';
 export const ROUTES: Routes = [
+  {
+    path: PRESENTATION_PATH,
+    component: PresentationPageComponent,
+    resolve: { breadcrumb: i18nBreadcrumbResolver },
+    data: { title: 'info.presentation.title', breadcrumbKey: 'info.presentation' },
+  },
+  {
+    path: REPOSITORY_POLICY_PATH,
+    component: RepositoryPolicyComponent,
+    resolve: { breadcrumb: i18nBreadcrumbResolver },
+    data: { title: 'info.repository-policy.title', breadcrumbKey: 'info.repository-policy' },
+  },
+  {
+    path: CONTACTS_PATH,
+    component: ContactsComponent,
+    resolve: { breadcrumb: i18nBreadcrumbResolver },
+    data: { title: 'info.contacts.title', breadcrumbKey: 'info.contacts' },
+  },
   {
     path: FEEDBACK_PATH,
     component: ThemedFeedbackComponent,
