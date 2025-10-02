@@ -11121,11 +11121,9 @@
   "file-download-link.request-copy": "Request a copy of ",
 
 //Navbar
- "navbar.about" : "Sobre",
- "navbar.help" : "Ajuda",
- "navbar.terms" : "Termos de Uso",
- "navbar.privacy" : "Política de Privacidade",
-
+ "navbar.presentation" : "Apresentação",
+ "navbar.repositorypolicy" : "Política do repositório",
+ "navbar.depositmanual" : "Manual de depósito",
  "navbar.contacts" : "Contatos",
 
 //Footer
