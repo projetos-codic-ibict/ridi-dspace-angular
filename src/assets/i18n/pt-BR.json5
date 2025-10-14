@@ -1594,7 +1594,7 @@
 
   // "browse.metadata.map.breadcrumbs": "Browse by Geolocation",
   // TODO New key - Add a translation
-  "browse.metadata.map.breadcrumbs": "Browse by Geolocation",
+  "browse.metadata.map.breadcrumbs": "Pesquisar por Geolocalização",
 
   // "browse.metadata.map.count.items": "items",
   // TODO New key - Add a translation
@@ -2033,7 +2033,7 @@
 
   // "collection.search.breadcrumbs": "Search",
   // TODO New key - Add a translation
-  "collection.search.breadcrumbs": "Search",
+  "collection.search.breadcrumbs": "Pesquisar",
 
   // "collection.search.results.head": "Search Results",
   "collection.search.results.head": "Resultados da Pesquisa",
@@ -2398,7 +2398,7 @@
 
   // "community.search.breadcrumbs": "Search",
   // TODO New key - Add a translation
-  "community.search.breadcrumbs": "Search",
+  "community.search.breadcrumbs": "Pesquisar",
 
   // "community.search.results.head": "Search Results",
   "community.search.results.head": "Resultados da Pesquisa",
@@ -2474,11 +2474,11 @@
 
   // "cookies.consent.app.title.accessibility": "Accessibility Settings",
   // TODO New key - Add a translation
-  "cookies.consent.app.title.accessibility": "Accessibility Settings",
+  "cookies.consent.app.title.accessibility": "Configurações de acessibilidade",
 
   // "cookies.consent.app.description.accessibility": "Required for saving your accessibility settings locally",
   // TODO New key - Add a translation
-  "cookies.consent.app.description.accessibility": "Required for saving your accessibility settings locally",
+  "cookies.consent.app.description.accessibility": "Necessário para salvar suas configurações de acessibilidade localmente",
 
   // "cookies.consent.app.title.authentication": "Authentication",
   "cookies.consent.app.title.authentication": "Autenticação",
@@ -2492,7 +2492,7 @@
 
   // "cookies.consent.app.description.correlation-id": "Allow us to track your session in backend logs for support/debugging purposes",
   // TODO New key - Add a translation
-  "cookies.consent.app.description.correlation-id": "Allow us to track your session in backend logs for support/debugging purposes",
+  "cookies.consent.app.description.correlation-id": "Permita-nos rastrear sua sessão em logs de backend para fins de suporte/depuração",
 
   // "cookies.consent.app.title.preferences": "Preferences",
   "cookies.consent.app.title.preferences": "Preferências",
@@ -2693,7 +2693,7 @@
   "dso-selector.set-scope.community.head": "Selecione um escopo de pesquisa",
 
   // "dso-selector.set-scope.community.button": "Search all of DSpace",
-  "dso-selector.set-scope.community.button": "Pesquisar em todo o DSpace",
+  "dso-selector.set-scope.community.button": "Pesquisar em todo o Ridi",
 
   // "dso-selector.set-scope.community.or-divider": "or",
   "dso-selector.set-scope.community.or-divider": "ou",
@@ -3345,36 +3345,36 @@
   "home.top-level-communities.help": "Selecione uma comunidade para navegar por suas coleções",
 
   // "info.accessibility-settings.breadcrumbs": "Accessibility settings",
-  // TODO New key - Add a translation
-  "info.accessibility-settings.breadcrumbs": "Accessibility settings",
+
+  "info.accessibility-settings.breadcrumbs": "Configurações de acessibilidade",
 
   // "info.accessibility-settings.cookie-warning": "Saving the accessibility settings is currently not possible. Either log in to save the settings in user data, or accept the 'Accessibility Settings' cookie using the 'Cookie Settings' menu at the bottom of the page. Once the cookie has been accepted, you can reload the page to remove this message.",
-  // TODO New key - Add a translation
-  "info.accessibility-settings.cookie-warning": "Saving the accessibility settings is currently not possible. Either log in to save the settings in user data, or accept the 'Accessibility Settings' cookie using the 'Cookie Settings' menu at the bottom of the page. Once the cookie has been accepted, you can reload the page to remove this message.",
+
+  "info.accessibility-settings.cookie-warning": "No momento, não é possível salvar as configurações de acessibilidade. Faça login para salvar as configurações nos dados do usuário ou aceite o cookie 'Configurações de Acessibilidade' usando o menu 'Configurações de Cookies' na parte inferior da página. Após a aceitação do cookie, você pode recarregar a página para remover esta mensagem.",
 
   // "info.accessibility-settings.disableNotificationTimeOut.label": "Automatically close notifications after time out",
-  // TODO New key - Add a translation
-  "info.accessibility-settings.disableNotificationTimeOut.label": "Automatically close notifications after time out",
+
+  "info.accessibility-settings.disableNotificationTimeOut.label": "Fechar notificações automaticamente após o tempo limite",
 
   // "info.accessibility-settings.disableNotificationTimeOut.hint": "When this toggle is activated, notifications will close automatically after the time out passes. When deactivated, notifications will remain open untill manually closed.",
-  // TODO New key - Add a translation
-  "info.accessibility-settings.disableNotificationTimeOut.hint": "When this toggle is activated, notifications will close automatically after the time out passes. When deactivated, notifications will remain open untill manually closed.",
+
+  "info.accessibility-settings.disableNotificationTimeOut.hint": "Quando esta opção estiver ativada, as notificações serão fechadas automaticamente após o tempo limite. Quando desativada, as notificações permanecerão abertas até que sejam fechadas manualmente.",
 
   // "info.accessibility-settings.failed-notification": "Failed to save accessibility settings",
-  // TODO New key - Add a translation
-  "info.accessibility-settings.failed-notification": "Failed to save accessibility settings",
+
+  "info.accessibility-settings.failed-notification": "Falha ao salvar as configurações de acessibilidade",
 
   // "info.accessibility-settings.invalid-form-notification": "Did not save. The form contains invalid values.",
   // TODO New key - Add a translation
   "info.accessibility-settings.invalid-form-notification": "Did not save. The form contains invalid values.",
 
   // "info.accessibility-settings.liveRegionTimeOut.label": "ARIA Live region time out (in seconds)",
-  // TODO New key - Add a translation
-  "info.accessibility-settings.liveRegionTimeOut.label": "ARIA Live region time out (in seconds)",
+
+  "info.accessibility-settings.liveRegionTimeOut.label": "Tempo limite da região ARIA Live (em segundos)",
 
   // "info.accessibility-settings.liveRegionTimeOut.hint": "The duration after which a message in the ARIA live region disappears. ARIA live regions are not visible on the page, but provide announcements of notifications (or other actions) to screen readers.",
   // TODO New key - Add a translation
-  "info.accessibility-settings.liveRegionTimeOut.hint": "The duration after which a message in the ARIA live region disappears. ARIA live regions are not visible on the page, but provide announcements of notifications (or other actions) to screen readers.",
+  "info.accessibility-settings.liveRegionTimeOut.hint": "Período após o qual uma mensagem na região ativa do ARIA desaparece. As regiões ativas do ARIA não são visíveis na página, mas fornecem anúncios de notificações (ou outras ações) aos leitores de tela.",
 
   // "info.accessibility-settings.liveRegionTimeOut.invalid": "Live region time out must be greater than 0",
   // TODO New key - Add a translation
@@ -3382,11 +3382,11 @@
 
   // "info.accessibility-settings.notificationTimeOut.label": "Notification time out (in seconds)",
   // TODO New key - Add a translation
-  "info.accessibility-settings.notificationTimeOut.label": "Notification time out (in seconds)",
+  "info.accessibility-settings.notificationTimeOut.label": "Tempo limite de notificação (em segundos)",
 
   // "info.accessibility-settings.notificationTimeOut.hint": "The duration after which a notification disappears.",
   // TODO New key - Add a translation
-  "info.accessibility-settings.notificationTimeOut.hint": "The duration after which a notification disappears.",
+  "info.accessibility-settings.notificationTimeOut.hint": "A duração após a qual uma notificação desaparece.",
 
   // "info.accessibility-settings.notificationTimeOut.invalid": "Notification time out must be greater than 0",
   // TODO New key - Add a translation
@@ -3402,23 +3402,23 @@
 
   // "info.accessibility-settings.reset-failed": "Failed to reset. Either log in or accept the 'Accessibility Settings' cookie.",
   // TODO New key - Add a translation
-  "info.accessibility-settings.reset-failed": "Failed to reset. Either log in or accept the 'Accessibility Settings' cookie.",
+  "info.accessibility-settings.reset-failed": "Falha ao redefinir. Efetue login ou aceite o cookie 'Configurações de Acessibilidade'.",
 
   // "info.accessibility-settings.reset-notification": "Successfully reset settings.",
-  // TODO New key - Add a translation
-  "info.accessibility-settings.reset-notification": "Successfully reset settings.",
+
+  "info.accessibility-settings.reset-notification": "Configurações redefinidas com sucesso.",
 
   // "info.accessibility-settings.reset": "Reset accessibility settings",
-  // TODO New key - Add a translation
-  "info.accessibility-settings.reset": "Reset accessibility settings",
+
+  "info.accessibility-settings.reset": "Redefinir configurações de acessibilidade",
 
   // "info.accessibility-settings.submit": "Save accessibility settings",
   // TODO New key - Add a translation
-  "info.accessibility-settings.submit": "Save accessibility settings",
+  "info.accessibility-settings.submit": "Salvar configurações de acessibilidade",
 
   // "info.accessibility-settings.title": "Accessibility settings",
   // TODO New key - Add a translation
-  "info.accessibility-settings.title": "Accessibility settings",
+  "info.accessibility-settings.title": "Configurações de acessibilidade",
 
   // "info.end-user-agreement.accept": "I have read and I agree to the End User Agreement",
   "info.end-user-agreement.accept": "Li e concordo com o Contrato de Usuário Final",
@@ -4308,7 +4308,7 @@
   "item.page.journal-title": "Título da Revista",
 
   // "item.page.publisher": "Publisher",
-  "item.page.publisher": "Editor",
+  "item.page.publisher": "Instituição",
 
   // "item.page.titleprefix": "Item: ",
   "item.page.titleprefix": "Item: ",
@@ -4613,7 +4613,7 @@
   "item.preview.dc.identifier.doi": "DOI",
 
   // "item.preview.dc.publisher": "Publisher:",
-  "item.preview.dc.publisher": "Editora:",
+  "item.preview.dc.publisher": "Insituição:",
 
   // "item.preview.person.familyName": "Surname:",
   "item.preview.person.familyName": "Sobrenome:",
@@ -5496,7 +5496,7 @@
   "metadata-export-search.submit.error": "Falha ao iniciar a exportação",
 
   // "mydspace.breadcrumbs": "MyDSpace",
-  "mydspace.breadcrumbs": "MeuDSpace",
+  "mydspace.breadcrumbs": "Meu Ridi",
 
   // "mydspace.description": "",
   "mydspace.description": "",
@@ -5577,7 +5577,7 @@
   "mydspace.results.no-uri": "Sem URI",
 
   // "mydspace.search-form.placeholder": "Search in MyDSpace...",
-  "mydspace.search-form.placeholder": "Procurar no MeuDSpace...",
+  "mydspace.search-form.placeholder": "Procurar no Meu Ridi...",
 
   // "mydspace.show.workflow": "Workflow tasks",
   "mydspace.show.workflow": "Tarefas de fluxo de trabalho",
@@ -5608,7 +5608,7 @@
   "mydspace.status.mydspaceWorkspace": "Área de trabalho",
 
   // "mydspace.title": "MyDSpace",
-  "mydspace.title": "MeuDSpace",
+  "mydspace.title": "Meu Ridi",
 
   // "mydspace.upload.upload-failed": "Error creating new workspace. Please verify the content uploaded before retry.",
   "mydspace.upload.upload-failed": "Erro ao criar novo espaço de trabalho. Por favor, verifique o conteúdo enviado antes de tentar novamente.",
@@ -5663,7 +5663,7 @@
   "nav.main.description": "Barra de navegação principal",
 
   // "nav.mydspace": "MyDSpace",
-  "nav.mydspace": "MeuDSpace",
+  "nav.mydspace": "Meu Ridi",
 
   // "nav.profile": "Profile",
   "nav.profile": "Perfil",
@@ -6259,16 +6259,16 @@
   "profile.breadcrumbs": "Atualizar Perfil",
 
   // "profile.card.accessibility.content": "Accessibility settings can be configured on the accessibility settings page.",
-  // TODO New key - Add a translation
-  "profile.card.accessibility.content": "Accessibility settings can be configured on the accessibility settings page.",
+
+  "profile.card.accessibility.content": "As configurações de acessibilidade podem ser definidas na página de configurações de acessibilidade.",
 
   // "profile.card.accessibility.header": "Accessibility",
-  // TODO New key - Add a translation
-  "profile.card.accessibility.header": "Accessibility",
+
+  "profile.card.accessibility.header": "Acessibilidade",
 
   // "profile.card.accessibility.link": "Go to Accessibility Settings Page",
-  // TODO New key - Add a translation
-  "profile.card.accessibility.link": "Go to Accessibility Settings Page",
+
+  "profile.card.accessibility.link": "Acesse a página de configurações de acessibilidade",
 
   // "profile.card.identify": "Identify",
   "profile.card.identify": "Identificação",
@@ -6413,7 +6413,7 @@
   "publication.page.journal-title": "Título da Revista",
 
   // "publication.page.publisher": "Publisher",
-  "publication.page.publisher": "Editora",
+  "publication.page.publisher": "Insituição",
 
   // "publication.page.options": "Options",
   // TODO New key - Add a translation
@@ -7133,13 +7133,13 @@
   "search.filters.filter.creativeWorkKeywords.label": "Pesquisar assunto",
 
   // "search.filters.filter.creativeWorkPublisher.head": "Publisher",
-  "search.filters.filter.creativeWorkPublisher.head": "Editora",
+  "search.filters.filter.creativeWorkPublisher.head": "Instituição",
 
   // "search.filters.filter.creativeWorkPublisher.placeholder": "Publisher",
-  "search.filters.filter.creativeWorkPublisher.placeholder": "Editora",
+  "search.filters.filter.creativeWorkPublisher.placeholder": "Instituição",
 
   // "search.filters.filter.creativeWorkPublisher.label": "Search publisher",
-  "search.filters.filter.creativeWorkPublisher.label": "Search editora",
+  "search.filters.filter.creativeWorkPublisher.label": "Pesquisar instituição",
 
   // "search.filters.filter.dateIssued.head": "Date",
   "search.filters.filter.dateIssued.head": "Data",
@@ -7448,7 +7448,7 @@
   "search.form.search_dspace": "Todo o repositório",
 
   // "search.form.scope.all": "All of DSpace",
-  "search.form.scope.all": "Todo o DSpace",
+  "search.form.scope.all": "Todo o Ridi",
 
   // "search.results.head": "Search Results",
   "search.results.head": "Resultados de Busca",
@@ -7684,7 +7684,7 @@
   "submission.import-external.title.JournalVolume": "Importar um volume de revista de uma fonte externa",
 
   // "submission.import-external.title.OrgUnit": "Import a publisher from an external source",
-  "submission.import-external.title.OrgUnit": "Importar um editor de uma fonte externa",
+  "submission.import-external.title.OrgUnit": "Importar uma instituição de uma fonte externa",
 
   // "submission.import-external.title.Person": "Import a person from an external source",
   "submission.import-external.title.Person": "Importar uma pessoa de uma fonte externa",
@@ -7702,7 +7702,7 @@
   "submission.import-external.page.hint": "Insira uma consulta acima para encontrar itens da web para importar para o DSpace.",
 
   // "submission.import-external.back-to-my-dspace": "Back to MyDSpace",
-  "submission.import-external.back-to-my-dspace": "Voltar para o MeuDSpace",
+  "submission.import-external.back-to-my-dspace": "Voltar para o Meu Ridi",
 
   // "submission.import-external.search.placeholder": "Search the external source",
   "submission.import-external.search.placeholder": "Procurar de uma fonte externa",
@@ -8516,10 +8516,10 @@
   "submission.sections.submit.progressbar.upload": "Enviar arquivos",
 
   // "submission.sections.submit.progressbar.sherpaPolicies": "Publisher open access policy information",
-  "submission.sections.submit.progressbar.sherpaPolicies": "Informações de políticas de acesso aberto do editor",
+  "submission.sections.submit.progressbar.sherpaPolicies": "Informações de políticas de acesso aberto da instituição",
 
   // "submission.sections.sherpa-policy.title-empty": "No publisher policy information available. If your work has an associated ISSN, please enter it above to see any related publisher open access policies.",
-  "submission.sections.sherpa-policy.title-empty": "No publisher policy information available. Se seu trabalho tiver um ISSN associado, por favor, insira-o acima para ver quaisquer políticas de acesso aberto do editor relacionadas.",
+  "submission.sections.sherpa-policy.title-empty": "No publisher policy information available. Se seu trabalho tiver um ISSN associado, por favor, insira-o acima para ver quaisquer políticas de acesso aberto da instituição relacionadas.",
 
   // "submission.sections.status.errors.title": "Errors",
   "submission.sections.status.errors.title": "Erros",
@@ -8732,7 +8732,7 @@
   "submission.sections.sherpa.publication.information.url": "URL",
 
   // "submission.sections.sherpa.publication.information.publishers": "Publisher",
-  "submission.sections.sherpa.publication.information.publishers": "Editor",
+  "submission.sections.sherpa.publication.information.publishers": "Instituição",
 
   // "submission.sections.sherpa.publication.information.romeoPub": "Romeo Pub",
   "submission.sections.sherpa.publication.information.romeoPub": "Romeo Pub",
@@ -8741,7 +8741,7 @@
   "submission.sections.sherpa.publication.information.zetoPub": "Zeto Pub",
 
   // "submission.sections.sherpa.publisher.policy": "Publisher Policy",
-  "submission.sections.sherpa.publisher.policy": "Política do Editor",
+  "submission.sections.sherpa.publisher.policy": "Política da Insituição",
 
   // "submission.sections.sherpa.publisher.policy.description": "The below information was found via Sherpa Romeo. Based on the policies of your publisher, it provides advice regarding whether an embargo may be necessary and/or which files you are allowed to upload. If you have questions, please contact your site administrator via the feedback form in the footer.",
   "submission.sections.sherpa.publisher.policy.description": "As informações abaixo foram encontradas via Sherpa Romeo. Com base nas políticas de seu editor, ele fornece conselhos sobre se um embargo pode ser necessário e/ou quais arquivos você tem permissão para enviar. Se você tiver dúvidas, entre em contato com o administrador do site por meio do formulário de sugestões no rodapé.",
@@ -11135,4 +11135,20 @@
   "footer.text3": "Fale conosco: rd@ibict.br • +55 61 3217-6449 / 6460 / 6433",
 
  "item.page.link.statistics": "Estatísticas",
+
+ //menu navegar
+ "browse.comcol.by.language" : "Por Idioma de publicação",
+ "browse.comcol.by.knowledgearea" : "Por Área de conhecimento",
+
+
+//breadcrumbs
+ "browse.metadata.language.breadcrumbs": "Pesquisar por Idioma de publicação",
+ "browse.metadata.knowledgearea.breadcrumbs": "Pesquisar por Área de conhecimento",
+ "info.presentation.breadcrumbs" : "Apresentação",
+ "info.repository-policy.breadcrumbs" : "Política do repositório",
+ "info.contacts.breadcrumbs" : "Contatos",
+
+//menu navegar
+"browse.metadata.language" : "Idioma de publicação",
+"browse.metadata.knowledgearea" : "Área de conhecimento",
 }
