@@ -38,6 +38,7 @@ import { ORCID_QUEUE } from './orcid/model/orcid-queue.resource-type';
 import { RESEARCHER_PROFILE } from './profile/model/researcher-profile.resource-type';
 import { RESOURCE_POLICY } from './resource-policy/models/resource-policy.resource-type';
 import { AUTHORIZATION } from './shared/authorization.resource-type';
+import { BIBLIOGRAPHY } from './shared/bibliography/bibliography.resource-type';
 import { BITSTREAM } from './shared/bitstream.resource-type';
 import { BITSTREAM_FORMAT } from './shared/bitstream-format.resource-type';
 import { BROWSE_DEFINITION } from './shared/browse-definition.resource-type';
@@ -88,6 +89,7 @@ export const LAZY_DATA_SERVICES: LazyDataServicesMap = new Map([
   [SUBSCRIPTION.value, () => import('../shared/subscriptions/subscriptions-data.service').then(m => m.SubscriptionsDataService)],
   [COMMUNITY.value, () => import('./data/community-data.service').then(m => m.CommunityDataService)],
   [VOCABULARY.value, () => import('./submission/vocabularies/vocabulary.data.service').then(m => m.VocabularyDataService)],
+  [BIBLIOGRAPHY.value, () => import('./data/bibliography-data.service').then(m => m.ItemBibliographyService)],
   [BUNDLE.value, () => import('./data/bundle-data.service').then(m => m.BundleDataService)],
   [CONFIG_PROPERTY.value, () => import('./data/configuration-data.service').then(m => m.ConfigurationDataService)],
   [POOL_TASK.value, () => import('./tasks/pool-task-data.service').then(m => m.PoolTaskDataService)],
