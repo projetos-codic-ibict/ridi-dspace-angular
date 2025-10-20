@@ -41,6 +41,7 @@ import { OrcidQueue } from './orcid/model/orcid-queue.model';
 import { ResearcherProfile } from './profile/model/researcher-profile.model';
 import { ResourcePolicy } from './resource-policy/models/resource-policy.model';
 import { Authorization } from './shared/authorization.model';
+import { BibliographyData } from './shared/bibliography/bibliography-data.model';
 import { Bitstream } from './shared/bitstream.model';
 import { BitstreamFormat } from './shared/bitstream-format.model';
 import { BrowseDefinition } from './shared/browse-definition.model';
@@ -111,6 +112,7 @@ export const models =
   [
     Root,
     DSpaceObject,
+    BibliographyData,
     Bundle,
     Bitstream,
     BitstreamFormat,

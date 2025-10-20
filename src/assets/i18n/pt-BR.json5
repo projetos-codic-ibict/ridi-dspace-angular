@@ -4408,7 +4408,7 @@
   // "item.page.citation": "Citation",
   "item.page.citation": "Citação",
 
-  "item.page.identifier.dark": "Identificador dARK", 
+  "item.page.identifier.dark": "Identificador dARK",
 
   // "item.page.collections": "Collections",
   "item.page.collections": "Coleções",
@@ -11151,4 +11151,25 @@
 //menu navegar
 "browse.metadata.language" : "Idioma de publicação",
 "browse.metadata.knowledgearea" : "Área de conhecimento",
+
+  "item.cite.open-modal": "Citar",
+
+  "item.cite.modal.title": "Citar",
+
+  "item.cite.modal.close": "Fechar",
+
+  "item.cite.modal.copy": "Copiar",
+
+  // TODO New key - Add a translation
+  "item.cite.modal.error": "Erro",
+
+  "modern-language-association": "MLA",
+
+  "apa": "APA",
+
+  "vancouver": "Vancouver",
+
+  "bibtex": "BibTeX",
+
+  "instituto-brasileiro-de-informacao-em-ciencia-e-tecnologia-abnt": "ABNT",
 }
