@@ -26,6 +26,7 @@ import { ThemedItemPageTitleFieldComponent } from '../../../../../../../app/item
 import { ItemPageUriFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
 import { ThemedMetadataRepresentationListComponent } from '../../../../../../../app/item-page/simple/metadata-representation-list/themed-metadata-representation-list.component';
 import { ItemComponent } from '../../../../../../../app/item-page/simple/item-types/shared/item.component';
+import { ItemPageBibliographyComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/bibliography/item-page-bibliography.component';
 
 /**
  * Component that represents a publication Item page
@@ -45,6 +46,7 @@ import { ItemComponent } from '../../../../../../../app/item-page/simple/item-ty
     GenericItemPageFieldComponent,
     GeospatialItemPageFieldComponent,
     ItemPageAbstractFieldComponent,
+    ItemPageBibliographyComponent,
     ItemPageCcLicenseFieldComponent,
     ItemPageDateFieldComponent,
     ItemPageUriFieldComponent,
