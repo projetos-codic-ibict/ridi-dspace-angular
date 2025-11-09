@@ -10861,15 +10861,15 @@
 
   // "form.date-picker.placeholder.year": "Year",
   // TODO New key - Add a translation
-  "form.date-picker.placeholder.year": "Year",
+  "form.date-picker.placeholder.year": "Ano",
 
   // "form.date-picker.placeholder.month": "Month",
   // TODO New key - Add a translation
-  "form.date-picker.placeholder.month": "Month",
+  "form.date-picker.placeholder.month": "Mês",
 
   // "form.date-picker.placeholder.day": "Day",
   // TODO New key - Add a translation
-  "form.date-picker.placeholder.day": "Day",
+  "form.date-picker.placeholder.day": "Dia",
 
   // "item.page.cc.license.title": "Creative Commons license",
   "item.page.cc.license.title": "Licença Creative Commons",
@@ -11151,4 +11151,28 @@
 //menu navegar
 "browse.metadata.language" : "Idioma de publicação",
 "browse.metadata.knowledgearea" : "Área de conhecimento",
+
+
+
+//formulários
+"submission.sections.submit.progressbar.describe.type" : "Tipo de documento",
+"submission.sections.submit.progressbar.describe.person" : "Dados do autor",
+"submission.sections.submit.progressbar.describe.person-fields" : "Dados de autor e banca",
+"submission.sections.submit.progressbar.describe.journal" : "Dados da revista",
+"submission.sections.submit.progressbar.describe.publisher" : "Dados da instituição",
+"submission.sections.submit.progressbar.describe.course" : "Dados do curso",
+"submission.sections.submit.progressbar.describe.program" : "Dados do programa",
+"submission.sections.submit.progressbar.describe.artigo1" : "Dados do artigo de revista",
+"submission.sections.submit.progressbar.describe.artigo2" : "Dados do artigo de revista",
+"submission.sections.submit.progressbar.describe.artigo3" : "Direitos",
+"submission.sections.submit.progressbar.describe.tese1" : "Dados da tese ou dissertação",
+"submission.sections.submit.progressbar.describe.tese2" : "Dados da tese ou dissertação",
+"submission.sections.submit.progressbar.describe.tese3" : "Agência de fomento e direitos",
+"submission.sections.submit.progressbar.describe.book1" : "Dados de livro ou capítulo de livro",
+"submission.sections.submit.progressbar.describe.book2" : "Dados de livro ou capítulo de livro",
+"submission.sections.submit.progressbar.describe.book3" : "Direitos",
+"submission.sections.submit.progressbar.describe.conferenceObject1" : "Dados do artigo de evento",
+"submission.sections.submit.progressbar.describe.conferenceObject2" : "Dados do artigo de evento",
+"submission.sections.submit.progressbar.describe.conferenceObject3" : "Direitos",
+
 }
