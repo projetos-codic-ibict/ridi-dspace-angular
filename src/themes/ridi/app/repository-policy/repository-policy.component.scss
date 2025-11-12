@@ -1,0 +1,78 @@
+.justificar {
+    text-align: justify;
+    line-height: 1.6;
+    }
+
+.center {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Hierarquia visual de capítulos */
+.justificar h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.justificar h3 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.justificar h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.justificar p {
+  margin-bottom: 1rem;
+}
+
+.justificar ul {
+  list-style-type: upper-roman;
+  padding-left: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.justificar ul li {
+  margin-bottom: 0.5rem;
+}
+
+.numero-hierarquico {
+  counter-reset: nivel1;
+  list-style: none;
+  padding-left: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.numero-hierarquico > li {
+  counter-increment: nivel1;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.numero-hierarquico > li::before {
+  content: counter(nivel1) ". ";
+  position: absolute;
+  left: -1.8rem;
+}
+
+.numero-hierarquico > li > ol {
+  counter-reset: nivel2;
+  list-style: none;
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+.numero-hierarquico > li > ol > li {
+  counter-increment: nivel2;
+  margin: 0.4rem 0;
+  position: relative;
+}
+
+.numero-hierarquico > li > ol > li::before {
+  content: counter(nivel1) "." counter(nivel2) " ";
+  position: absolute;
+  left: -2rem;
+}
