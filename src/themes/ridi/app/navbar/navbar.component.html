@@ -18,13 +18,14 @@
      aria-haspopup="true"
      [attr.aria-expanded]="isDropdownORidiOpen"
      (click)="$event.preventDefault(); isDropdownORidiOpen = !isDropdownORidiOpen">
-    O RiDi
+    {{'navbar.o-ridi' | translate}}
   </a>
   <div class="dropdown-menu"
        [ngClass]="{'show': isDropdownORidiOpen}"
        aria-labelledby="o-ridi-dropdown">
     <a class="ds-menu-item dropdown-item" href="/info/presentation">{{'navbar.presentation' | translate}}</a>
-    <a class="ds-menu-item dropdown-item" href="/info/repositorypolicy">{{'navbar.repositorypolicy' | translate}}</a>
+    <!-- <a class="ds-menu-item dropdown-item" href="/info/repositorypolicy">{{'navbar.repositorypolicy' | translate}}</a> -->
+     <a class="ds-menu-item dropdown-item" href="assets/docs/Política de Informação RI IBICT - Portaria nº 043.2014_2014.pdf" target="_blank" rel="noopener">{{ 'navbar.policy' | translate }}</a>
     <a class="ds-menu-item dropdown-item" href="/info/depositmanual">{{'navbar.depositmanual' | translate}}</a>
   </div>
 </div>
