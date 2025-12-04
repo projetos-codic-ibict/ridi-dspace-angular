@@ -1,0 +1,29 @@
+.item-page-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.item-page {
+  width: 100%;
+}
+
+.item-page-layout {
+  display: flex;
+  gap: 2rem;
+  max-width: 1300px; 
+  margin: 0 auto;
+}
+
+.admin-tools-column {
+  flex: 0 0 220px;
+}
+
+.item-content-column {
+  flex: 1;
+  max-width: 1050px; 
+}
+
+.full-item-info {
+  margin-top: 1rem;
+}

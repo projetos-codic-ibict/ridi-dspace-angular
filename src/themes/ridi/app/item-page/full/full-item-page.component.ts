@@ -21,13 +21,12 @@ import { DsoEditMenuComponent } from '../../../../../app/shared/dso-page/dso-edi
 import { ErrorComponent } from '../../../../../app/shared/error/error.component';
 import { ThemedLoadingComponent } from '../../../../../app/shared/loading/themed-loading.component';
 import { VarDirective } from '../../../../../app/shared/utils/var.directive';
+import { AdminToolsComponent } from '../../admin-tools/admin-tools.component';
 
 @Component({
   selector: 'ds-themed-full-item-page',
-  // styleUrls: ['./full-item-page.component.scss'],
-  styleUrls: ['../../../../../app/item-page/full/full-item-page.component.scss'],
-  // templateUrl: './full-item-page.component.html',
-  templateUrl: '../../../../../app/item-page/full/full-item-page.component.html',
+  styleUrls: ['./full-item-page.component.scss'],
+  templateUrl: './full-item-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut],
   standalone: true,
@@ -46,6 +45,7 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
     ThemedLoadingComponent,
     TranslateModule,
     VarDirective,
+    AdminToolsComponent,
   ],
 })
 export class FullItemPageComponent extends BaseComponent {

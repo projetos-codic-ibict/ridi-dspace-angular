@@ -1,0 +1,33 @@
+.admin-tools-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  width: 28rem;
+  height: 100vh;
+}
+
+h3 {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.admin-tool-button {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: 2px solid #0056b3;
+  background-color: white;
+  color: #0056b3;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.admin-tool-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
