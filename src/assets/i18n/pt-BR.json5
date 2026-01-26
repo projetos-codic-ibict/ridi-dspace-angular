@@ -11188,8 +11188,8 @@
 "submission.sections.submit.progressbar.describe.tese1" : "Dados da tese ou dissertação",
 "submission.sections.submit.progressbar.describe.tese2" : "Dados da tese ou dissertação",
 "submission.sections.submit.progressbar.describe.tese3" : "Agência de fomento e direitos",
-"submission.sections.submit.progressbar.describe.book1" : "Dados de livro ou capítulo de livro",
-"submission.sections.submit.progressbar.describe.book2" : "Dados de livro ou capítulo de livro",
+"submission.sections.submit.progressbar.describe.book1" : "Dados do livro ou capítulo de livro",
+"submission.sections.submit.progressbar.describe.book2" : "Dados do livro ou capítulo de livro",
 "submission.sections.submit.progressbar.describe.book3" : "Direitos",
 "submission.sections.submit.progressbar.describe.conferenceObject1" : "Dados do artigo de evento",
 "submission.sections.submit.progressbar.describe.conferenceObject2" : "Dados do artigo de evento",
@@ -11528,12 +11528,6 @@
     "dc.contributor.referee4" : "Membro de banca",
     "dc.contributor.referee4Lattes" : "Lattes do membro de banca",
     "dc.contributor.referee4ID" : "Orcid do membro de banca",
-    "" : "",
-    "" : "",
-    "" : "",
-
-
-
   },
 }
 
