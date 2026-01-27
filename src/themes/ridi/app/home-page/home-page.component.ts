@@ -180,13 +180,13 @@ copyItemLink(itemId: string): void {
     try {
       // Defina os tipos que você quer exibir
       const tiposItens = [
-        'Apresentação',
-        'Artigo',
+
+        
         'Artigo de Periódico',
         'Capítulo de livro',
         'Dissertação',
         'Livro',
-        'Outro',
+   
         'Tese',
         'Trabalho apresentado em evento',
       ];

@@ -68,7 +68,7 @@ export class TypeBadgeComponent {
 
     const typeColors: Record<string, { background: string; color: string }> = {
       apresentação: { background: '#17a2b8', color: '#fff' },
-      artigo: { background: '#007bff', color: '#fff' },
+      'relatório de pesquisa': { background: '#007bff', color: '#fff' },
       'artigo de periódico': { background: '#0056b3', color: '#fff' },
       'capítulo de livro': { background: '#218838', color: '#fff' },
       dissertação: { background: '#6f42c1', color: '#fff' },
