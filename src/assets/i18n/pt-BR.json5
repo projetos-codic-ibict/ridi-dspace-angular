@@ -11308,7 +11308,7 @@
 "info.repository-policy.art4" : "Acelerar e fortalecer desenvolvimento das pesquisas institucionais;",
 "info.repository-policy.art5init" : "Art. 5º",
 "info.repository-policy.art5" : "Ampliar o acesso à sua produção científica;",
-"info.repository-policy.art6init " : "Art. 6º",
+"info.repository-policy.art6init" : "Art. 6º",
 "info.repository-policy.art6" : "Facilitar o acesso à informação científica de uma forma geral;",
 "info.repository-policy.art7init" : "Art. 7º",
 "info.repository-policy.art7" : "Otimizar a gestão de investimentos em pesquisa do Ibict.",
@@ -11371,7 +11371,7 @@
 "info.repository-policy.art12point3note" : "A coleção PPGCI IBICT-UFF foi descontinuada e trata-se de uma coleção fechada.",
 "info.repository-policy.art12point4" : "PPGCI IBICT-UFRJ",
 "info.repository-policy.art12point4desc" : "Programa de Pós-Graduação em Ciência da Informação desenvolvido pelo IBICT e pela UFRJ. Contém a coleção de tese e dissertações.",
-"info.repository-policy.art12point5" : "Recursos educacionais",
+
 "info.repository-policy.chapter7" : "CAPÍTULO VII",
 "info.repository-policy.chapter7sub" : "POLÍTICA DE ARQUIVAMENTO",
 "info.repository-policy.art13init" : "Art. 13º",
@@ -11421,6 +11421,24 @@
 "info.repository-policy.art29init" : "Art. 29º -",
 "info.repository-policy.art29" : "Esta política entrará em vigor na data de sua publicação.",
 
+//tela de Contatos
+
+"contact": {
+    "title": "Contato",
+    "generalCoordination": "Coordenação-geral de Informação Científica e Técnica (CGIC)",
+    "generalCoordinationText": "Coordenação-geral de Informação Científica e Técnica (CGIC)",
+    "analysisCoordination": "Coordenação de Tratamento, Análise e Disseminação da Informação Científica (CODIC)",
+    "analysisCoordinationText": "Coordenação de Tratamento, Análise e Disseminação da Informação Científica (CODIC)",
+    "email": "Email",
+    "emailAddress": "rd@ibict.br",
+    "phone": "Telefone",
+    "phoneNumber": "(61) 3217-6134 / (61) 3217-6157 / (61) 3217-6449",
+    "team": "Equipe técnica",
+    "member1": {
+      "name": "Cássio Morais",
+      "email": "cassiomorais@Ibict.br"
+    }
+  },
 
 
 "navbar.o-ridi" : "O RIDI",
