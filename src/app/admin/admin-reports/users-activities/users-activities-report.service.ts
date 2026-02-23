@@ -62,7 +62,7 @@ export class UserActivityReportService {
    * Get all user statistics
    */
   getUsers(): Observable<UserActivityStats[]> {
-    const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, this.ENPOINT_URL).toString();
+    const url = new RESTURLCombiner(this.ENPOINT_URL).toString();
     return this.http.get<UserActivityStats[]>(url);
   }
 
@@ -70,7 +70,7 @@ export class UserActivityReportService {
    * Get summary statistics only
    */
   getSummary(): Observable<ReportSummary> {
-    const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, `${this.ENPOINT_URL}/summary`).toString();
+    const url = new RESTURLCombiner(`${this.ENPOINT_URL}/summary`).toString();
     return this.http.get<ReportSummary>(url);
   }
 
@@ -78,7 +78,7 @@ export class UserActivityReportService {
    * Get all actions without aggregation
    */
   getAllActions(): Observable<UserAction[]> {
-    const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, `${this.ENPOINT_URL}/actions`).toString();
+    const url = new RESTURLCombiner(`${this.ENPOINT_URL}/actions`).toString();
     return this.http.get<UserAction[]>(url);
   }
 
@@ -86,7 +86,7 @@ export class UserActivityReportService {
    * Get summary statistics with trend data aggregated by month
    */
   getSummaryWithTrends(): Observable<SummaryWithTrendData> {
-    const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, `${this.ENPOINT_URL}/summary-with-trends`).toString();
+    const url = new RESTURLCombiner(`${this.ENPOINT_URL}/summary-with-trends`).toString();
     return this.http.get<SummaryWithTrendData>(url);
   }
 }
