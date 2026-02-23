@@ -741,6 +741,111 @@
 
   "admin.reports.commons.filters.permission.has_restricted_metadata.tooltip": "Item has metadata that is not accessible to Anonymous user",
 
+  "admin.reports.users-activities.title": "Users Activities Report",
+
+  "admin.reports.users-activities.breadcrumbs": "Users Activities Report",
+
+  "admin.reports.users-activities.description": "View detailed statistics about users' activity across submissions and reviews",
+
+  "admin.reports.users-activities.summary": "Summary",
+
+  "admin.reports.users-activities.user-stats": "Users Statistics",
+
+  "admin.reports.users-activities.users-indicators": "Users Indicators",
+
+  "admin.reports.users-activities.actions": "All Actions",
+
+  "admin.reports.users-activities.total-users": "Total Users",
+
+  "admin.reports.users-activities.total-submissions": "Total Submissions",
+
+  "admin.reports.users-activities.total-reviews": "Total Reviews",
+
+  "admin.reports.users-activities.total-approvals": "Total Approvals",
+
+  "admin.reports.users-activities.total-rejections": "Total Rejections",
+
+  "admin.reports.users-activities.total-withdrawals": "Total Withdrawals",
+
+  "admin.reports.users-activities.report-summary": "Report Summary",
+
+  "admin.reports.users-activities.user-statistics": "Users Statistics",
+
+  "admin.reports.users-activities.all-actions": "All Actions",
+
+  "admin.reports.users-activities.download-CSV": "Download CSV",
+
+  "admin.reports.users-activities.name": "Name",
+
+  "admin.reports.users-activities.email": "Email",
+
+  "admin.reports.users-activities.submissions": "Submissions",
+
+  "admin.reports.users-activities.reviews": "Reviews",
+
+  "admin.reports.users-activities.approvals": "Approvals",
+
+  "admin.reports.users-activities.rejections": "Rejections",
+
+  "admin.reports.users-activities.withdrawals": "Withdrawals",
+
+  "admin.reports.users-activities.searchByEmailOrName": "Search by email or name...",
+
+  "admin.reports.users-activities.action": "Action",
+
+  "admin.reports.users-activities.user": "User",
+
+  "admin.reports.users-activities.date": "Date",
+
+  "admin.reports.users-activities.details": "Details",
+
+  "admin.reports.users-activities.submitted": "Submitted",
+
+  "admin.reports.users-activities.reviewed": "Reviewed",
+
+  "admin.reports.users-activities.approved": "Approved",
+
+  "admin.reports.users-activities.rejected": "Rejected",
+
+  "admin.reports.users-activities.withdrawn": "Withdrawn",
+
+  "admin.reports.users-activities.no-results": "No results found",
+
+  "admin.reports.users-activities.activity-trends": "Activity Trends by Month",
+
+  "admin.reports.users-activities.start-date": "Start Date (YYYY-MM)",
+
+  "admin.reports.users-activities.end-date": "End Date (YYYY-MM)",
+
+  "admin.reports.users-activities.reset-filter": "Reset Filter",
+
+  "admin.reports.users-activities.monthly": "Monthly",
+
+  "admin.reports.users-activities.year": "Year",
+
+  "admin.reports.users-activities.yearly": "Yearly",
+
+  "admin.reports.users-activities.count": "Count",
+  "admin.reports.users-activities.month": "Month",
+
+  "admin.reports.users-activities.top-10-submissions": "Top 10 Users by Submissions",
+
+  "admin.reports.users-activities.top-10-reviews": "Top 10 Users by Reviews",
+
+  "admin.reports.users-activities.top-10-approvals": "Top 10 Users by Approvals",
+
+  "admin.reports.users-activities.top-10-rejections": "Top 10 Users by Rejections",
+
+  "admin.reports.users-activities.top-10-withdrawals": "Top 10 Users by Withdrawals",
+
+  "admin.reports.users-activities.download-csv": "Download CSV",
+
+  "admin.reports.users-activities.search-by-email-or-name": "Search by email or name...",
+
+  "admin.reports.users-activities.no-trend-data": "No trend data available for selected period",
+
+  "admin.reports.users-activities.user-stats": "Users Statistics",
+
   "admin.search.breadcrumbs": "Administrative Search",
 
   "admin.search.collection.edit": "Edit",
@@ -3428,6 +3533,8 @@
   "menu.section.reports.collections": "Filtered Collections",
 
   "menu.section.reports.queries": "Metadata Query",
+
+  "menu.section.reports.users-activities": "Users Activities Report",
 
   "menu.section.admin_search": "Admin Search",
 

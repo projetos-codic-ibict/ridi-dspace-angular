@@ -1113,6 +1113,155 @@
   // "admin.reports.commons.filters.permission.has_restricted_metadata.tooltip": "Item has metadata that is not accessible to Anonymous user",
   "admin.reports.commons.filters.permission.has_restricted_metadata.tooltip": "Item con metadatos no accesibles a usuarios anónimos",
 
+  // "admin.reports.users-activities.title": "Users Activity Report",
+  "admin.reports.users-activities.title": "Informe de Actividades de Usuarios",
+
+  // "admin.reports.users-activities.breadcrumbs": "Users Activity Report",
+  "admin.reports.users-activities.breadcrumbs": "Informe de Actividades de Usuarios",
+
+  // "admin.reports.users-activities.description": "View detailed statistics about users' activity across submissions and reviews",
+  "admin.reports.users-activities.description": "Ver estadísticas detalladas sobre la actividad de los usuarios en envíos y revisiones",
+
+  // "admin.reports.users-activities.summary": "Summary",
+  "admin.reports.users-activities.summary": "Resumen",
+
+  // "admin.reports.users-activities.user-stats": "Users Statistics",
+  "admin.reports.users-activities.user-stats": "Estadísticas de usuarios",
+
+  "admin.reports.users-activities.users-indicators": "Indicadores de Usuarios",
+
+  // "admin.reports.users-activities.actions": "All Actions",
+  "admin.reports.users-activities.actions": "Todas las acciones",
+
+  // "admin.reports.users-activities.total-users": "Total Users",
+  "admin.reports.users-activities.total-users": "Total de usuarios",
+
+  // "admin.reports.users-activities.total-submissions": "Total Submissions",
+  "admin.reports.users-activities.total-submissions": "Total de envíos",
+
+  // "admin.reports.users-activities.total-reviews": "Total Reviews",
+  "admin.reports.users-activities.total-reviews": "Total de revisiones",
+
+  // "admin.reports.users-activities.total-approvals": "Total Approvals",
+  "admin.reports.users-activities.total-approvals": "Total de aprobaciones",
+
+  // "admin.reports.users-activities.total-rejections": "Total Rejections",
+  "admin.reports.users-activities.total-rejections": "Total de rechazos",
+
+  // "admin.reports.users-activities.total-withdrawals": "Total Withdrawals",
+  "admin.reports.users-activities.total-withdrawals": "Total de retiros",
+
+  // "admin.reports.users-activities.report-summary": "Report Summary",
+  "admin.reports.users-activities.report-summary": "Resumen del informe",
+
+  // "admin.reports.users-activities.user-statistics": "Users Statistics",
+  "admin.reports.users-activities.user-statistics": "Estadísticas de usuarios",
+
+  // "admin.reports.users-activities.all-actions": "All Actions",
+  "admin.reports.users-activities.all-actions": "Todas las acciones",
+
+  // "admin.reports.users-activities.download-CSV": "Download CSV",
+  "admin.reports.users-activities.download-CSV": "Descargar CSV",
+
+  // "admin.reports.users-activities.name": "Name",
+  "admin.reports.users-activities.name": "Nombre",
+
+  // "admin.reports.users-activities.email": "Email",
+  "admin.reports.users-activities.email": "Email",
+
+  // "admin.reports.users-activities.submissions": "Submissions",
+  "admin.reports.users-activities.submissions": "Envíos",
+
+  // "admin.reports.users-activities.reviews": "Reviews",
+  "admin.reports.users-activities.reviews": "Revisiones",
+
+  // "admin.reports.users-activities.approvals": "Approvals",
+  "admin.reports.users-activities.approvals": "Aprobaciones",
+
+  // "admin.reports.users-activities.rejections": "Rejections",
+  "admin.reports.users-activities.rejections": "Rechazos",
+
+  // "admin.reports.users-activities.withdrawals": "Withdrawals",
+  "admin.reports.users-activities.withdrawals": "Retiros",
+
+  // "admin.reports.users-activities.searchByEmailOrName": "Search by email or name...",
+  "admin.reports.users-activities.searchByEmailOrName": "Buscar por email o nombre...",
+
+  // "admin.reports.users-activities.action": "Action",
+  "admin.reports.users-activities.action": "Acción",
+
+  // "admin.reports.users-activities.user": "User",
+  "admin.reports.users-activities.user": "Usuario",
+
+  // "admin.reports.users-activities.date": "Date",
+  "admin.reports.users-activities.date": "Fecha",
+
+  // "admin.reports.users-activities.details": "Details",
+  "admin.reports.users-activities.details": "Detalles",
+
+  // "admin.reports.users-activities.submitted": "Submitted",
+  "admin.reports.users-activities.submitted": "Enviado",
+
+  // "admin.reports.users-activities.reviewed": "Reviewed",
+  "admin.reports.users-activities.reviewed": "Revisado",
+
+  // "admin.reports.users-activities.approved": "Approved",
+  "admin.reports.users-activities.approved": "Aprobado",
+
+  // "admin.reports.users-activities.rejected": "Rejected",
+  "admin.reports.users-activities.rejected": "Rechazado",
+
+  // "admin.reports.users-activities.withdrawn": "Withdrawn",
+  "admin.reports.users-activities.withdrawn": "Retirado",
+
+  // "admin.reports.users-activities.noResults": "No results found",
+  "admin.reports.users-activities.noResults": "No se encontraron resultados",
+
+  // "admin.reports.users-activities.activity-trends": "Activity Trends by Month",
+  "admin.reports.users-activities.activity-trends": "Tendencias de Actividad por Mes",
+
+  // "admin.reports.users-activities.start-date": "Start Date (YYYY-MM)",
+  "admin.reports.users-activities.start-date": "Fecha de Inicio (YYYY-MM)",
+
+  // "admin.reports.users-activities.end-date": "End Date (YYYY-MM)",
+  "admin.reports.users-activities.end-date": "Fecha de Fin (YYYY-MM)",
+
+  // "admin.reports.users-activities.reset-filter": "Reset Filter",
+  "admin.reports.users-activities.reset-filter": "Restablecer Filtro",
+
+  // "admin.reports.users-activities.monthly": "Monthly",
+  "admin.reports.users-activities.monthly": "Mensual",
+
+  // "admin.reports.users-activities.yearly": "Yearly",
+  "admin.reports.users-activities.yearly": "Anual",
+  "admin.reports.users-activities.year": "Año",
+   "admin.reports.users-activities.count": "Cantidad",
+   "admin.reports.users-activities.month": "Mes",
+
+  // "admin.reports.users-activities.top-10-submissions": "Top 10 Users by Submissions",
+  "admin.reports.users-activities.top-10-submissions": "Top 10 usuarios por envíos",
+
+  // "admin.reports.users-activities.top-10-reviews": "Top 10 Users by Reviews",
+  "admin.reports.users-activities.top-10-reviews": "Top 10 usuarios por revisiones",
+
+  // "admin.reports.users-activities.top-10-approvals": "Top 10 Users by Approvals",
+  "admin.reports.users-activities.top-10-approvals": "Top 10 usuarios por aprobaciones",
+
+  // "admin.reports.users-activities.top-10-rejections": "Top 10 Users by Rejections",
+  "admin.reports.users-activities.top-10-rejections": "Top 10 usuarios por rechazos",
+
+  // "admin.reports.users-activities.top-10-withdrawals": "Top 10 Users by Withdrawals",
+  "admin.reports.users-activities.top-10-withdrawals": "Top 10 usuarios por retiros",
+
+  // "admin.reports.users-activities.download-csv": "Download CSV",
+  "admin.reports.users-activities.download-csv": "Descargar CSV",
+
+  // "admin.reports.users-activities.search-by-email-or-name": "Search by email or name...",
+  "admin.reports.users-activities.search-by-email-or-name": "Buscar por email o nombre...",
+
+  // "admin.reports.users-activities.no-trend-data": "No trend data available for selected period",
+  "admin.reports.users-activities.no-trend-data": "Sin datos de tendencia disponibles para el período seleccionado",
+
   // "admin.search.breadcrumbs": "Administrative Search",
   "admin.search.breadcrumbs": "Búsqueda administrativa",
 
@@ -5236,6 +5385,9 @@
 
   // "menu.section.reports.queries": "Metadata Query",
   "menu.section.reports.queries": "Consulta de metadatos",
+
+  // "menu.section.reports.users-activities": "Users Activity Report",
+  "menu.section.reports.users-activities": "Informe de Actividades de Usuarios",
 
   // "menu.section.admin_search": "Admin Search",
   "menu.section.admin_search": "Búsqueda de administrador",
