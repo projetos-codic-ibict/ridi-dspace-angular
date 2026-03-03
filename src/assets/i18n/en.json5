@@ -7319,4 +7319,12 @@
   "bibtex": "BibTeX",
 
   "instituto-brasileiro-de-informacao-em-ciencia-e-tecnologia-abnt": "ABNT",
+
+   "media-viewer.pdf.files": "Files",
+
+  "media-viewer.pdf.browser-not-support": "Your browser does not support the PDF viewer.",
+
+  "media-viewer.pdf.download": "Download the PDF",
+
+  "media-viewer.loading": "Loading",
 }

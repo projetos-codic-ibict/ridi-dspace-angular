@@ -18,16 +18,11 @@
   <ds-dso-edit-menu></ds-dso-edit-menu>
 </div>
 <div class="row">
-  <div class="col-xs-12 col-md-4">
+  <div class="col-12 col-md-4">
     @if (!(mediaViewer.image || mediaViewer.video)) {
       <ds-metadata-field-wrapper [hideIfNoTextContent]="false">
         <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
       </ds-metadata-field-wrapper>
-    }
-    @if (mediaViewer.image || mediaViewer.video) {
-      <div class="mb-2">
-        <ds-media-viewer [item]="object"></ds-media-viewer>
-      </div>
     }
     <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
     <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
@@ -55,7 +50,7 @@
     </ds-generic-item-page-field>
     <ds-item-page-bibliography [item]="object"></ds-item-page-bibliography>
   </div>
-  <div class="col-xs-12 col-md-7">
+  <div class="col-12 col-md-7">
     <ds-related-items
       [parentItem]="object"
       [relationType]="'isProjectOfPublication'"
@@ -107,6 +102,11 @@
       [fields]="['datacite.relation.isReferencedBy']"
       [label]="'item.page.referenced'">
     </ds-item-page-uri-field>
+    @if (mediaViewer.image || mediaViewer.video || mediaViewer.pdf) {
+      <div class="mb-2">
+        <ds-media-viewer [item]="object"></ds-media-viewer>
+      </div>
+    }
     @if (geospatialItemPageFieldsEnabled) {
       <ds-geospatial-item-page-field [item]="object"
                                      [label]="'item.page.places'"

@@ -11700,6 +11700,13 @@
     "dc.contributor.referee4Lattes" : "Lattes do membro de banca",
     "dc.contributor.referee4ID" : "Orcid do membro de banca",
   },
-}
 
+  "media-viewer.pdf.files": "Arquivos",
+
+  "media-viewer.pdf.browser-not-support": "Seu navegador não é compatível com o visualizador de PDF.",
+
+  "media-viewer.pdf.download": "Baixar o PDF",
+
+  "media-viewer.loading": "Carregando",
+}
 

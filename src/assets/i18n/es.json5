@@ -11235,4 +11235,12 @@
   "bibtex": "BibTeX",
 
   "instituto-brasileiro-de-informacao-em-ciencia-e-tecnologia-abnt": "ABNT",
+  
+  "media-viewer.pdf.files": "Archivos",
+  
+  "media-viewer.pdf.browser-not-support": "Tu navegador no es compatible con el visor de PDF.",
+
+  "media-viewer.pdf.download": "Descargar el PDF",
+
+  "media-viewer.loading": "Cargando",
 }
