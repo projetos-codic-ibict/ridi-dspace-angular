@@ -11347,7 +11347,9 @@
 "submission.sections.submit.progressbar.describe.conferenceObject1" : "Dados do artigo de evento",
 "submission.sections.submit.progressbar.describe.conferenceObject2" : "Dados do artigo de evento",
 "submission.sections.submit.progressbar.describe.conferenceObject3" : "Direitos",
-
+"submission.sections.submit.progressbar.describe.relatorio1" : "Dados do relatório de pesquisa", 
+"submission.sections.submit.progressbar.describe.relatorio2" : "Dados do relatório de pesquisa",
+"submission.sections.submit.progressbar.describe.relatorio3" : "Agência de fomento e direitos",
 
 //tela de Apresentação
 "presentation.description1" : "O Repositório Institucional do Instituto Brasileiro de Informação em Ciência e Tecnologia (RIDI) é a base de dados responsável por registrar, preservar e disseminar a produção científica e técnica realizada no âmbito do Ibict. Alinhado ao contexto dos repositórios institucionais de Acesso Aberto, os repositórios digitais  referem-se aos diferentes tipos de plataformas de provedores de dados destinados ao gerenciamento de informações científicas, funcionando, obrigatoriamente, como alternativas de comunicação científica (Leite, 2009). O RIDI foi oficialmente instituído pela Portaria nº 043, de 10 de setembro de 2014, que estabelece sua política de funcionamento.",
