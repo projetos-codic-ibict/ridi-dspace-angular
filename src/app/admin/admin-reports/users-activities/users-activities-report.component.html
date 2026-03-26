@@ -20,7 +20,7 @@
   }
 
   <!-- Report Content -->
-  @if (!loading || summary || users) {
+  @if (!loading || summary || users || actions) {
     <div class="report-content">
       <!-- Navigation Tabs -->
       <ul class="nav nav-tabs mb-3" role="tablist">
@@ -42,6 +42,16 @@
             type="button"
           >
             {{ "admin.reports.users-activities.user-stats" | translate }}
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            [class.active]="activeTab === 'actions'"
+            (click)="setTab('actions')"
+            type="button"
+          >
+            {{ "admin.reports.users-activities.actions" | translate }}
           </button>
         </li>
       </ul>
@@ -495,58 +505,279 @@
                     }}
                   </h5>
                   <div class="row g-3 mb-4">
-                    <div class="col-12 col-lg-6">
-                      <div class="card">
-                        <div class="card-body">
-                          <div
-                            #submissionsChartContainer
-                            style="height: 320px"
-                          ></div>
+                    @if (hasDataFor("submissions")) {
+                      <div class="col-12 col-lg-6">
+                        <div class="card">
+                          <div class="card-body">
+                            <div
+                              #submissionsChartContainer
+                              style="height: 320px"
+                            ></div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="card">
-                        <div class="card-body">
-                          <div
-                            #reviewsChartContainer
-                            style="height: 320px"
-                          ></div>
+                    }
+                    @if (hasDataFor("reviews")) {
+                      <div class="col-12 col-lg-6">
+                        <div class="card">
+                          <div class="card-body">
+                            <div
+                              #reviewsChartContainer
+                              style="height: 320px"
+                            ></div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="card">
-                        <div class="card-body">
-                          <div
-                            #approvalsChartContainer
-                            style="height: 320px"
-                          ></div>
+                    }
+                    @if (hasDataFor("approvals")) {
+                      <div class="col-12 col-lg-6">
+                        <div class="card">
+                          <div class="card-body">
+                            <div
+                              #approvalsChartContainer
+                              style="height: 320px"
+                            ></div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="card">
-                        <div class="card-body">
-                          <div
-                            #rejectionsChartContainer
-                            style="height: 320px"
-                          ></div>
+                    }
+                    @if (hasDataFor("rejections")) {
+                      <div class="col-12 col-lg-6">
+                        <div class="card">
+                          <div class="card-body">
+                            <div
+                              #rejectionsChartContainer
+                              style="height: 320px"
+                            ></div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                      <div class="card">
-                        <div class="card-body">
-                          <div
-                            #withdrawalsChartContainer
-                            style="height: 320px"
-                          ></div>
+                    }
+                    @if (hasDataFor("withdrawals")) {
+                      <div class="col-12 col-lg-6">
+                        <div class="card">
+                          <div class="card-body">
+                            <div
+                              #withdrawalsChartContainer
+                              style="height: 320px"
+                            ></div>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    }
                   </div>
                 </div>
+              }
+            </div>
+          </div>
+        }
+
+        <!-- Actions Tab -->
+        @if (activeTab === "actions") {
+          <div class="tab-pane active">
+            <div class="actions-tab">
+              <!-- Loading State -->
+              @if (loading && !actions) {
+                <div class="d-flex justify-content-center my-4">
+                  <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">{{
+                      "loading" | translate
+                    }}</span>
+                  </div>
+                </div>
+              }
+
+              @if (actions) {
+                <h5 class="mb-2">
+                  {{ "admin.reports.commons.filters" | translate }}
+                </h5>
+
+                <div class="row g-2 mb-3">
+                  <div class="col-md-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="{{
+                        'admin.reports.users-activities.filter-action-type'
+                          | translate
+                      }}"
+                      [(ngModel)]="actionsFilterActionType"
+                      (change)="onActionsFilterChange()"
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="{{
+                        'admin.reports.users-activities.filter-item-id'
+                          | translate
+                      }}"
+                      [(ngModel)]="actionsFilterItemId"
+                      (change)="onActionsFilterChange()"
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="{{
+                        'admin.reports.users-activities.filter-user-name'
+                          | translate
+                      }}"
+                      [(ngModel)]="actionsFilterUserName"
+                      (change)="onActionsFilterChange()"
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="{{
+                        'admin.reports.users-activities.filter-user-email'
+                          | translate
+                      }}"
+                      [(ngModel)]="actionsFilterUserEmail"
+                      (change)="onActionsFilterChange()"
+                    />
+                  </div>
+                  <div class="col-md-1 d-flex justify-content-end">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary w-100"
+                      (click)="resetActionsFilters()"
+                    >
+                      {{
+                        "admin.reports.users-activities.filter-reset"
+                          | translate
+                      }}
+                    </button>
+                  </div>
+                </div>
+
+                <h4>
+                  {{ "admin.reports.users-activities.all-actions" | translate }}
+                </h4>
+
+                <div class="table-responsive">
+                  <table class="table table-striped table-sm">
+                    <thead class="table-header-bg">
+                      <tr>
+                        <th>
+                          {{
+                            "admin.reports.users-activities.action" | translate
+                          }}
+                        </th>
+                        <th>
+                          {{
+                            "admin.reports.users-activities.item-title"
+                              | translate
+                          }}
+                        </th>
+                        <th>
+                          {{
+                            "admin.reports.users-activities.user" | translate
+                          }}
+                        </th>
+                        <th>
+                          {{
+                            "admin.reports.users-activities.email" | translate
+                          }}
+                        </th>
+                        <th>
+                          {{
+                            "admin.reports.users-activities.date" | translate
+                          }}
+                        </th>
+                        <th>
+                          {{
+                            "admin.reports.users-activities.details" | translate
+                          }}
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @for (
+                        action of actions;
+                        track action.itemUUID + action.actionDate
+                      ) {
+                        <tr>
+                          <td>
+                            @if (action.actionType === "SUBMITTED") {
+                              <span class="badge bg-primary">
+                                {{
+                                  "admin.reports.users-activities.submitted"
+                                    | translate
+                                }}
+                              </span>
+                            }
+                            @if (action.actionType === "REVIEWED") {
+                              <span class="badge bg-info">
+                                {{
+                                  "admin.reports.users-activities.reviewed"
+                                    | translate
+                                }}
+                              </span>
+                            }
+                            @if (action.actionType === "APPROVED") {
+                              <span class="badge bg-success">
+                                {{
+                                  "admin.reports.users-activities.approved"
+                                    | translate
+                                }}
+                              </span>
+                            }
+                            @if (action.actionType === "REJECTED") {
+                              <span class="badge bg-danger">
+                                {{
+                                  "admin.reports.users-activities.rejected"
+                                    | translate
+                                }}
+                              </span>
+                            }
+                            @if (action.actionType === "WITHDRAWN") {
+                              <span class="badge bg-warning text-dark">
+                                {{
+                                  "admin.reports.users-activities.withdrawn"
+                                    | translate
+                                }}
+                              </span>
+                            }
+                          </td>
+                          <td>{{ action.itemTitle || "-" }}</td>
+                          <td>{{ action.userName }}</td>
+                          <td>{{ action.email }}</td>
+                          <td>{{ action.actionDate | date: "short" }}</td>
+                          <td>{{ action.details }}</td>
+                        </tr>
+                      }
+                      @if (actions.length === 0) {
+                        <tr>
+                          <td colspan="6" class="text-center text-muted">
+                            {{
+                              "admin.reports.users-activities.noResults"
+                                | translate
+                            }}
+                          </td>
+                        </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+
+                @if (actionsTotalElements > actionsPageSize) {
+                  <div class="d-flex justify-content-center mt-3">
+                    <ngb-pagination
+                      [collectionSize]="actionsTotalElements"
+                      [pageSize]="actionsPageSize"
+                      [(page)]="actionsCurrentPage"
+                      [maxSize]="5"
+                      [rotate]="true"
+                      [boundaryLinks]="true"
+                      (pageChange)="onActionsPageChange($event)"
+                    ></ngb-pagination>
+                  </div>
+                }
               }
             </div>
           </div>

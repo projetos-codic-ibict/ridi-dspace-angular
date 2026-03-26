@@ -1,20 +1,44 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import {
+  TranslateModule,
+  TranslateService,
+} from '@ngx-translate/core';
 import ApexCharts, { ApexOptions } from 'apexcharts';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { ReportSummary, SummaryWithTrendData, UserAction, UserActivityReport, UserActivityReportService, UserActivityStats } from './users-activities-report.service';
+import {
+  PaginatedUserActionsResponse,
+  ReportSummary,
+  SummaryWithTrendData,
+  UserAction,
+  UserActivityReport,
+  UserActivityReportService,
+  UserActivityStats,
+} from './users-activities-report.service';
 
 @Component({
   selector: 'ds-users-activities-report',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule, NgbModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    NgbModule,
+    TranslateModule,
+  ],
   templateUrl: './users-activities-report.component.html',
-  styleUrls: ['./users-activities-report.component.scss']
+  styleUrls: ['./users-activities-report.component.scss'],
 })
 export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('trendChartContainer') chartContainer?: ElementRef<HTMLDivElement>;
@@ -23,6 +47,9 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
   @ViewChild('approvalsChartContainer') approvalsChartContainer?: ElementRef<HTMLDivElement>;
   @ViewChild('rejectionsChartContainer') rejectionsChartContainer?: ElementRef<HTMLDivElement>;
   @ViewChild('withdrawalsChartContainer') withdrawalsChartContainer?: ElementRef<HTMLDivElement>;
+
+  // LocalStorage key for tab persistence
+  private readonly ACTIVE_TAB_KEY = 'dspace-users-activities-active-tab';
 
   report: UserActivityReport | null = null;
   summary: ReportSummary | null = null;
@@ -41,9 +68,20 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
   currentPage = 1;
   itemsPerPage = 10;
 
+  // Server-side pagination/filtering for actions table
+  actionsCurrentPage = 1;
+  actionsPageSize = 10;
+  actionsTotalElements = 0;
+  actionsTotalPages = 0;
+  actionsFilterItemId = '';
+  actionsFilterActionType = '';
+  actionsFilterUserEmail = '';
+  actionsFilterUserName = '';
+  private actionsLoaded = false;
+
   // Date filter for trend data
-  startDate: string = '';
-  endDate: string = '';
+  startDate = '';
+  endDate = '';
   filteredTrendData: { [month: string]: { [actionType: string]: number } } = {};
 
   // View type: 'monthly' or 'yearly'
@@ -71,10 +109,11 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
   constructor(
     private reportService: UserActivityReportService,
     private cdr: ChangeDetectorRef,
-    private translate: TranslateService
-  ) {}
+    private translate: TranslateService,
+  ) { }
 
   ngOnInit(): void {
+    this.restoreActiveTab();
     this.loadDataForTab();
   }
 
@@ -152,12 +191,12 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
           this.loading = false;
           this.cdr.detectChanges();
         },
-        error: (err) => {
+        error: (err: unknown) => {
           console.error('Error loading summary:', err);
           this.error = 'Error loading summary data. Please try again later.';
           this.loading = false;
           this.cdr.detectChanges();
-        }
+        },
       });
   }
 
@@ -180,38 +219,86 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
             this.renderUserStatsCharts();
           }, 0);
         },
-        error: (err) => {
+        error: (err: unknown) => {
           console.error('Error loading users:', err);
           this.error = 'Error loading user statistics. Please try again later.';
           this.loading = false;
           this.cdr.detectChanges();
-        }
+        },
       });
   }
 
   loadActions(): void {
-    if (this.actions) {
+    if (this.actionsLoaded) {
       return; // Already loaded
     }
+
+    this.fetchActions();
+  }
+
+  private fetchActions(): void {
+    const params = this.getActionsQueryParams();
 
     this.loading = true;
     this.error = null;
 
-    this.reportService.getAllActions()
+    this.reportService.getAllActions(params)
       .pipe(takeUntil(this.destroy$))
       .subscribe({
         next: (data) => {
-          this.actions = data;
+          this.assignActionsResponse(data);
+          this.actionsLoaded = true;
           this.loading = false;
           this.cdr.detectChanges();
         },
-        error: (err) => {
+        error: (err: unknown) => {
           console.error('Error loading actions:', err);
           this.error = 'Error loading actions data. Please try again later.';
           this.loading = false;
           this.cdr.detectChanges();
-        }
+        },
       });
+  }
+
+  private getActionsQueryParams() {
+    return {
+      page: this.actionsCurrentPage - 1,
+      size: this.actionsPageSize,
+      itemId: this.actionsFilterItemId.trim() || undefined,
+      actionType: this.actionsFilterActionType.trim() || undefined,
+      userEmail: this.actionsFilterUserEmail.trim() || undefined,
+      userName: this.actionsFilterUserName.trim() || undefined,
+    };
+  }
+
+  private assignActionsResponse(response: PaginatedUserActionsResponse): void {
+    this.actions = response.content || [];
+    this.actionsTotalElements = response.totalElements ?? 0;
+    this.actionsTotalPages = response.totalPages ?? 0;
+    this.actionsCurrentPage = (response.currentPage ?? 0) + 1;
+    this.actionsPageSize = response.pageSize ?? this.actionsPageSize;
+  }
+
+  onActionsFilterChange(): void {
+    this.actionsCurrentPage = 1;
+    this.actionsLoaded = false;
+    this.fetchActions();
+  }
+
+  resetActionsFilters(): void {
+    this.actionsFilterItemId = '';
+    this.actionsFilterActionType = '';
+    this.actionsFilterUserEmail = '';
+    this.actionsFilterUserName = '';
+    this.actionsCurrentPage = 1;
+    this.actionsLoaded = false;
+    this.fetchActions();
+  }
+
+  onActionsPageChange(page: number): void {
+    this.actionsCurrentPage = page;
+    this.actionsLoaded = false;
+    this.fetchActions();
   }
 
   getFilteredUsers() {
@@ -226,7 +313,7 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
       const search = this.searchEmail.toLowerCase();
       filtered = filtered.filter(u =>
         u.email.toLowerCase().includes(search) ||
-        u.userName.toLowerCase().includes(search)
+        u.userName.toLowerCase().includes(search),
       );
     }
 
@@ -262,8 +349,8 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
           break;
       }
 
-      if (aVal < bVal) return this.sortDirection === 'asc' ? -1 : 1;
-      if (aVal > bVal) return this.sortDirection === 'asc' ? 1 : -1;
+      if (aVal < bVal) { return this.sortDirection === 'asc' ? -1 : 1; }
+      if (aVal > bVal) { return this.sortDirection === 'asc' ? 1 : -1; }
       return 0;
     });
 
@@ -329,35 +416,35 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
       'submissions',
       this.submissionsChartContainer,
       this.getUserChartTitle('submissions'),
-      this.getTopUsersBy('submissions')
+      this.getTopUsersBy('submissions'),
     );
 
     this.renderUserChart(
       'reviews',
       this.reviewsChartContainer,
       this.getUserChartTitle('reviews'),
-      this.getTopUsersBy('reviews')
+      this.getTopUsersBy('reviews'),
     );
 
     this.renderUserChart(
       'approvals',
       this.approvalsChartContainer,
       this.getUserChartTitle('approvals'),
-      this.getTopUsersBy('approvals')
+      this.getTopUsersBy('approvals'),
     );
 
     this.renderUserChart(
       'rejections',
       this.rejectionsChartContainer,
       this.getUserChartTitle('rejections'),
-      this.getTopUsersBy('rejections')
+      this.getTopUsersBy('rejections'),
     );
 
     this.renderUserChart(
       'withdrawals',
       this.withdrawalsChartContainer,
       this.getUserChartTitle('withdrawals'),
-      this.getTopUsersBy('withdrawals')
+      this.getTopUsersBy('withdrawals'),
     );
   }
 
@@ -390,18 +477,25 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
     return users
       .map(user => ({
         name: user.userName || user.email,
-        value: getValue(user)
+        value: getValue(user),
       }))
       .filter(item => item.value > 0)
       .sort((a, b) => b.value - a.value)
       .slice(0, 10);
   }
 
+  /**
+   * Check if there is data for a specific metric to show the chart
+   */
+  hasDataFor(metric: 'submissions' | 'reviews' | 'approvals' | 'rejections' | 'withdrawals'): boolean {
+    return this.getTopUsersBy(metric).length > 0;
+  }
+
   private renderUserChart(
     key: 'submissions' | 'reviews' | 'approvals' | 'rejections' | 'withdrawals',
     container: ElementRef<HTMLDivElement> | undefined,
     title: string,
-    data: { name: string; value: number }[]
+    data: { name: string; value: number }[],
   ): void {
     if (!container || !container.nativeElement) {
       return;
@@ -426,25 +520,25 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
       chart: {
         type: 'bar',
         height: 320,
-        toolbar: { show: false }
+        toolbar: { show: false },
       },
       title: { text: title },
       series,
       xaxis: {
         categories,
-        labels: { trim: true }
+        labels: { trim: true },
       },
       plotOptions: {
         bar: {
           horizontal: true,
-          barHeight: '70%'
-        }
+          barHeight: '70%',
+        },
       },
       dataLabels: { enabled: false },
       tooltip: {
         theme: 'light',
-        y: { formatter: (value: number) => Math.round(value).toString() }
-      }
+        y: { formatter: (value: number) => Math.round(value).toString() },
+      },
     };
 
     const destroyInstance = (instance: ApexCharts | null) => {
@@ -484,6 +578,7 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
 
   setTab(tab: 'summary' | 'users' | 'actions'): void {
     this.activeTab = tab;
+    this.saveActiveTab();
     this.loadDataForTab();
 
     if (tab === 'users') {
@@ -491,6 +586,23 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
         this.renderUserStatsCharts();
       }, 0);
     }
+  }
+
+  /**
+   * Restore the active tab from localStorage, defaulting to 'summary' if not found
+   */
+  private restoreActiveTab(): void {
+    const savedTab = localStorage.getItem(this.ACTIVE_TAB_KEY);
+    if (savedTab === 'summary' || savedTab === 'users' || savedTab === 'actions') {
+      this.activeTab = savedTab;
+    }
+  }
+
+  /**
+   * Save the active tab to localStorage
+   */
+  private saveActiveTab(): void {
+    localStorage.setItem(this.ACTIVE_TAB_KEY, this.activeTab);
   }
 
   /**
@@ -563,7 +675,7 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
           SUBMITTED: 0,
           APPROVED: 0,
           REJECTED: 0,
-          WITHDRAWN: 0
+          WITHDRAWN: 0,
         };
       }
 
@@ -662,7 +774,7 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
       SUBMITTED: '#0066cc',
       APPROVED: '#28a745',
       REJECTED: '#dc3545',
-      WITHDRAWN: '#ffc107'
+      WITHDRAWN: '#ffc107',
     };
 
     // Prepare series data for each action type
@@ -673,7 +785,7 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
       SUBMITTED: this.translate.instant('admin.reports.users-activities.submitted'),
       APPROVED: this.translate.instant('admin.reports.users-activities.approved'),
       REJECTED: this.translate.instant('admin.reports.users-activities.rejected'),
-      WITHDRAWN: this.translate.instant('admin.reports.users-activities.withdrawn')
+      WITHDRAWN: this.translate.instant('admin.reports.users-activities.withdrawn'),
     };
 
     for (const actionType of actionTypes) {
@@ -685,7 +797,7 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
       series.push({
         name: legendLabels[actionType] || actionType,
         data: data,
-        color: colors[actionType]
+        color: colors[actionType],
       });
     }
 
@@ -742,50 +854,50 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
             zoomin: true,
             zoomout: true,
             pan: true,
-            reset: true
-          }
-        }
+            reset: true,
+          },
+        },
       },
       title: {
-        text: titleText
+        text: titleText,
       },
       series: series,
       xaxis: {
         categories: periods,
         type: 'category',
         title: {
-          text: xAxisTitle
-        }
+          text: xAxisTitle,
+        },
       },
       yaxis: {
         title: {
-          text: yAxisTitle
+          text: yAxisTitle,
         },
-        min: 0
+        min: 0,
       },
       plotOptions: {
         bar: {
           horizontal: false,
           columnWidth: '55%',
           dataLabels: {
-            position: 'top'
-          }
-        }
+            position: 'top',
+          },
+        },
       },
       legend: {
         position: 'top',
-        horizontalAlign: 'right'
+        horizontalAlign: 'right',
       },
       grid: {
         show: true,
-        borderColor: '#f1f1f1'
+        borderColor: '#f1f1f1',
       },
       tooltip: {
         theme: 'light',
         y: {
-          formatter: (value: number) => Math.round(value).toString()
-        }
-      }
+          formatter: (value: number) => Math.round(value).toString(),
+        },
+      },
     };
 
     try {
@@ -809,12 +921,12 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
       user.totalApprovals + user.totalRejections + user.totalWithdrawals,
       user.totalApprovals,
       user.totalRejections,
-      user.totalWithdrawals
+      user.totalWithdrawals,
     ]);
 
     const csvContent = [
       headers.join(','),
-      ...rows.map(row => row.map(cell => `"${cell}"`).join(','))
+      ...rows.map(row => row.map(cell => `"${cell}"`).join(',')),
     ].join('\n');
 
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
@@ -828,4 +940,5 @@ export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnD
     link.click();
     document.body.removeChild(link);
   }
+
 }
