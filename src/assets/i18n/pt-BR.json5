@@ -7527,15 +7527,15 @@
 
   // "search.filters.filter.access_status.head": "Access type",
   // TODO New key - Add a translation
-  "search.filters.filter.access_status.head": "Access type",
+  "search.filters.filter.access_status.head": "Tipo de acesso",
 
   // "search.filters.filter.access_status.placeholder": "Access type",
   // TODO New key - Add a translation
-  "search.filters.filter.access_status.placeholder": "Access type",
+  "search.filters.filter.access_status.placeholder": "Tipo de acesso",
 
   // "search.filters.filter.access_status.label": "Search by access type",
   // TODO New key - Add a translation
-  "search.filters.filter.access_status.label": "Search by access type",
+  "search.filters.filter.access_status.label": "Pesquisar por tipo de acesso",
 
   // "search.filters.entityType.JournalIssue": "Journal Issue",
   "search.filters.entityType.JournalIssue": "Número de Revista",
