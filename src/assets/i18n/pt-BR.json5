@@ -11743,5 +11743,25 @@
   "media-viewer.pdf.download": "Baixar o PDF",
 
   "media-viewer.loading": "Carregando",
+
+  "browse.metadata.institution" : "Instituição",
+
+  "browse.metadata.keyword" : "Palavra-chave",
+
+  "browse.comcol.by.institution" : "Por Insituição",
+
+  "browse.comcol.by.keyword" : "Por Palavra-chave",
+
+  "browse.metadata.institution.breadcrumbs" : "Pesquisar por Insituição",
+  
+  "browse.metadata.keyword.breadcrumbs" : "Pesquisar por Palavra-chave",
+
+  "search.filters.filter.cnpq.label" : "Pesquisar por área de conhecimento",
+
+  "search.filters.filter.cnpq.placeholder" : "Área de conhecimento",
+
+  "search.filters.filter.name.label" : "Pesquisar por instituição",
+
+  "search.filters.filter.name.placeholder" : "Insituição",
 }
 
