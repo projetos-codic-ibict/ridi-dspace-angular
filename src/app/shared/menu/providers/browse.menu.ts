@@ -63,7 +63,7 @@ export class BrowseMenuProvider extends AbstractExpandableMenuProvider {
       getFirstSucceededRemoteData(),
       map((rd: RemoteData<PaginatedList<BrowseDefinition>>) => {
         return [
-          ...rd.payload.page.map((browseDef) => {
+          ...rd.payload.page.filter((browseDef) => browseDef.id !=='keyword').map((browseDef) => {
             return {
               visible: true,
               model: {
