@@ -4796,7 +4796,7 @@
   "item.preview.dc.identifier.doi": "DOI",
 
   // "item.preview.dc.publisher": "Publisher:",
-  "item.preview.dc.publisher": "Insituição:",
+  "item.preview.dc.publisher": "Instituição:",
 
   // "item.preview.person.familyName": "Surname:",
   "item.preview.person.familyName": "Sobrenome:",
@@ -5493,7 +5493,7 @@
 
   "menu.section.browse_global_by_keyword": "Por Palavra-chave",
 
-  "menu.section.browse_global_by_institution": "Por Insituição",
+  "menu.section.browse_global_by_institution": "Por Instituição",
 
   // "menu.section.control_panel": "Control Panel",
   "menu.section.control_panel": "Painel de Controle",
@@ -6599,7 +6599,7 @@
   "publication.page.journal-title": "Título da Revista",
 
   // "publication.page.publisher": "Publisher",
-  "publication.page.publisher": "Insituição",
+  "publication.page.publisher": "Instituição",
 
   // "publication.page.options": "Options",
   // TODO New key - Add a translation
@@ -7263,7 +7263,7 @@
 
   "search.filters.filter.cnpq.head": "Área de conhecimento",
 
-  "search.filters.filter.name.head": "Insituição",
+  "search.filters.filter.name.head": "Instituição",
 
   // "search.filters.filter.author.placeholder": "Author name",
   "search.filters.filter.author.placeholder": "Nome do autor",
@@ -8927,7 +8927,7 @@
   "submission.sections.sherpa.publication.information.zetoPub": "Zeto Pub",
 
   // "submission.sections.sherpa.publisher.policy": "Publisher Policy",
-  "submission.sections.sherpa.publisher.policy": "Política da Insituição",
+  "submission.sections.sherpa.publisher.policy": "Política da Instituição",
 
   // "submission.sections.sherpa.publisher.policy.description": "The below information was found via Sherpa Romeo. Based on the policies of your publisher, it provides advice regarding whether an embargo may be necessary and/or which files you are allowed to upload. If you have questions, please contact your site administrator via the feedback form in the footer.",
   "submission.sections.sherpa.publisher.policy.description": "As informações abaixo foram encontradas via Sherpa Romeo. Com base nas políticas de seu editor, ele fornece conselhos sobre se um embargo pode ser necessário e/ou quais arquivos você tem permissão para enviar. Se você tiver dúvidas, entre em contato com o administrador do site por meio do formulário de sugestões no rodapé.",
@@ -11720,7 +11720,7 @@
     "dc.contributor.referee1" : "Membro de banca",
     "dc.contributor.referee2" : "Membro de banca",
     "dc.creator.Lattes" : "Lattes do autor",
-    "dc.publisher.initials" : "Insituição",
+    "dc.publisher.initials" : "Instituição",
     "dcterms.subject	" : "",
     "dc.contributor.referee1ID" : "Orcid do membro de banca",
     "dc.contributor.advisor1Lattes" : "Lattes do orientador",
@@ -11748,11 +11748,11 @@
 
   "browse.metadata.keyword" : "Palavra-chave",
 
-  "browse.comcol.by.institution" : "Por Insituição",
+  "browse.comcol.by.institution" : "Por Instituição",
 
   "browse.comcol.by.keyword" : "Por Palavra-chave",
 
-  "browse.metadata.institution.breadcrumbs" : "Pesquisar por Insituição",
+  "browse.metadata.institution.breadcrumbs" : "Pesquisar por Instituição",
   
   "browse.metadata.keyword.breadcrumbs" : "Pesquisar por Palavra-chave",
 
@@ -11762,6 +11762,6 @@
 
   "search.filters.filter.name.label" : "Pesquisar por instituição",
 
-  "search.filters.filter.name.placeholder" : "Insituição",
+  "search.filters.filter.name.placeholder" : "Instituição",
 }
 
